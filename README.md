@@ -21,8 +21,8 @@ Gomoku, also called Five in a Row, is an abstract strategy board game. It is tra
 ****
 
 ## Requirements
-1.Implement the basic logic of Gomoku and finish man-man game mode in the console without undo mode:
-
+1. Implement the basic logic of Gomoku and finish man-man game mode in the console without undo mode:
+  
   i.  A two array with 19 rows and 19 columns representing the 19*19 board with the default value of 0.
   
   ii. Update any array element by inputting the value (E.g. 1 for black and 0 for white).
@@ -34,6 +34,7 @@ Gomoku, also called Five in a Row, is an abstract strategy board game. It is tra
   v.  After every move, check if there are five stones in row vertically or horizontally or diagonally.
   
   vi. If there are 5 stones in a row, end the game with the winner's name.
+  
   
 2. Build a graphic window using EasyX and design a good user interface.
 
