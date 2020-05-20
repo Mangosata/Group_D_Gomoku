@@ -20,6 +20,16 @@ Gomoku, also called Five in a Row, is an abstract strategy board game. It is tra
 2.Man-machine battle: The purpose of this mode's implementation is to have the player play with trained agent by implementing the reinforcement learning
 ****
 
-## How to use it
+## Requirements
+1.Implement the basic logic of Gomoku and finish man-man game mode in the console without undo mode:
+  A two array with 19 rows and 19 columns representing the 19*19 board with the default value of 0.
+  Update any array element by inputting the value (E.g. 1 for black and 0 for white).
+  Once the array element is updated, restrict the array element to change for the whole game.
+  After two players (different colours) play chess separately, the system checks the position of the pieces.
+  After every move, check if there are five stones in row vertically or horizontally or diagonally.
+  If there are 5 stones in a row, end the game with the winner's name.
+2. Build a graphic window using EasyX and design a good user interface.
+3. Add background music to the game.
+4. Try to implement the undo feature.
+5. Try to implement basic intelligent man-machine logic.
 
-****
