@@ -122,6 +122,33 @@ Group_D_Gomoku/fast:
 	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/build
 .PHONY : Group_D_Gomoku/fast
 
+game.obj: game.c.obj
+
+.PHONY : game.obj
+
+# target to build an object file
+game.c.obj:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/game.c.obj
+.PHONY : game.c.obj
+
+game.i: game.c.i
+
+.PHONY : game.i
+
+# target to preprocess a source file
+game.c.i:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/game.c.i
+.PHONY : game.c.i
+
+game.s: game.c.s
+
+.PHONY : game.s
+
+# target to generate assembly for a file
+game.c.s:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/game.c.s
+.PHONY : game.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... Group_D_Gomoku
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... game.obj
+	@echo ... game.i
+	@echo ... game.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

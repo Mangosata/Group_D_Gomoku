@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Group_D_Gomoku.dir/game.c.obj"
   "CMakeFiles/Group_D_Gomoku.dir/main.c.obj"
   "Group_D_Gomoku.exe"
   "Group_D_Gomoku.exe.manifest"

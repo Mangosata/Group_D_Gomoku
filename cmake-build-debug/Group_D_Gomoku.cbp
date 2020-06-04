@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="F:/Group_D_Gomoku/game.c">
+			<Option target="Group_D_Gomoku"/>
+		</Unit>
+		<Unit filename="F:/Group_D_Gomoku/game.h">
+			<Option target="Group_D_Gomoku"/>
+		</Unit>
 		<Unit filename="F:/Group_D_Gomoku/main.c">
 			<Option target="Group_D_Gomoku"/>
 		</Unit>

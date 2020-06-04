@@ -1,6 +1,11 @@
 #include <stdio.h>
+#include "game.h"
 
-int main() {
-    printf("Hello, World!\n");
+
+int main(void) {
+    char gameBoard[ROWS][COLS];
+
+    initBoard(gameBoard);
+
     return 0;
 }
