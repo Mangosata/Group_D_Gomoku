@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "game.h"
+#include "../include/game.h"
 
 
 int main(void) {

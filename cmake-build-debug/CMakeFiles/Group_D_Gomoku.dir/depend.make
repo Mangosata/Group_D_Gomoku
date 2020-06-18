@@ -4,6 +4,5 @@
 CMakeFiles/Group_D_Gomoku.dir/game.c.obj: ../game.c
 CMakeFiles/Group_D_Gomoku.dir/game.c.obj: ../game.h
 
-CMakeFiles/Group_D_Gomoku.dir/main.c.obj: ../game.h
 CMakeFiles/Group_D_Gomoku.dir/main.c.obj: ../main.c
 

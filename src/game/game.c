@@ -2,7 +2,7 @@
 // Created by bin jia on 2020/5/30.
 //
 
-#include "game.h"
+#include "../../include/game.h"
 
 void initBoard(char board[ROWS][COLS]) {
     int i, j;
@@ -26,18 +26,18 @@ void initBoard(char board[ROWS][COLS]) {
 /* Todo: checkWinner
  * Assignee: Tingye Yu
  * */
-void checkWinner(char board[ROWS][COLS]) {
-    ;
-}
+//void checkWinner(char board[ROWS][COLS]) {
+//    ;
+//}
 
 
 /* Todo: playerMove
  * Assignee: Bin Jia
  *
  * */
-void playerMove(char board[ROWS][COLS], int row, int col) {
-    ;
-}
+//void playerMove(char board[ROWS][COLS], int row, int col) {
+//    ;
+//}
 
 /* Todo: isFullBoard
  * Assignee: Hongzhi Zhang
