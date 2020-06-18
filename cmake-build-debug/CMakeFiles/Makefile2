@@ -73,12 +73,12 @@ clean: CMakeFiles/Group_D_Gomoku.dir/clean
 CMakeFiles/Group_D_Gomoku.dir/all:
 	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/depend
 	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Group_D_Gomoku\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target Group_D_Gomoku"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\Group_D_Gomoku\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4 "Built target Group_D_Gomoku"
 .PHONY : CMakeFiles/Group_D_Gomoku.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Group_D_Gomoku.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\Group_D_Gomoku\cmake-build-debug\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\Group_D_Gomoku\cmake-build-debug\CMakeFiles 4
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Group_D_Gomoku.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\Group_D_Gomoku\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Group_D_Gomoku.dir/rule

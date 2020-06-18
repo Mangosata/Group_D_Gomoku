@@ -1,11 +1,8 @@
 #include <stdio.h>
-#include "../include/game.h"
+#include "../include/game/game.h"
 
 
 int main(void) {
-    char gameBoard[ROWS][COLS];
-
-    initBoard(gameBoard);
 
     return 0;
 }

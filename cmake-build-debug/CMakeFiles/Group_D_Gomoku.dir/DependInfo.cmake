@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "F:/Group_D_Gomoku/game.c" "F:/Group_D_Gomoku/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/game.c.obj"
-  "F:/Group_D_Gomoku/main.c" "F:/Group_D_Gomoku/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/main.c.obj"
+  "F:/Group_D_Gomoku/src/board/board.c" "F:/Group_D_Gomoku/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/src/board/board.c.obj"
+  "F:/Group_D_Gomoku/src/game/game.c" "F:/Group_D_Gomoku/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.obj"
+  "F:/Group_D_Gomoku/src/main.c" "F:/Group_D_Gomoku/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/src/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

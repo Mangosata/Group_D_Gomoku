@@ -35,19 +35,26 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="complete intiBoard in console">
+    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="complete folder structures">
+      <change afterPath="$PROJECT_DIR$/include/board/board.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/game/game.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/board/board.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/game.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Group_D_Gomoku.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Group_D_Gomoku.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/game.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/game.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/game.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +93,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Group_D_Gomoku\include\game" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Group_D_Gomoku" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Group_D_Gomoku" TARGET_NAME="Group_D_Gomoku" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Group_D_Gomoku" RUN_TARGET_NAME="Group_D_Gomoku">
       <method v="2">
@@ -94,7 +106,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="CMake Application.Group_D_Gomoku" />
         <item itemvalue="CMake Application.Group_D_Gomoku" />
         <item itemvalue="CMake Application.Group_D_Gomoku" />
       </list>
@@ -118,7 +129,6 @@
       <workItem from="1590784608006" duration="720000" />
       <workItem from="1590890941234" duration="863000" />
       <workItem from="1591246227989" duration="1569000" />
-      <workItem from="1592510793806" duration="358000" />
     </task>
     <servers />
   </component>
@@ -158,22 +168,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="391" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591247172552" />
-    <state width="1877" height="332" key="GridCell.Tab.0.bottom" timestamp="1592510848854">
+    <state width="1877" height="332" key="GridCell.Tab.0.bottom" timestamp="1592512215905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592510848854" />
-    <state width="1877" height="332" key="GridCell.Tab.0.center" timestamp="1592510848854">
+    <state width="1877" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592512215905" />
+    <state width="1877" height="332" key="GridCell.Tab.0.center" timestamp="1592512215905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="332" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592510848854" />
-    <state width="1877" height="332" key="GridCell.Tab.0.left" timestamp="1592510848853">
+    <state width="1877" height="332" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592512215905" />
+    <state width="1877" height="332" key="GridCell.Tab.0.left" timestamp="1592512215905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="332" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592510848853" />
-    <state width="1877" height="332" key="GridCell.Tab.0.right" timestamp="1592510848854">
+    <state width="1877" height="332" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592512215905" />
+    <state width="1877" height="332" key="GridCell.Tab.0.right" timestamp="1592512215905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="332" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592510848854" />
+    <state width="1877" height="332" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592512215905" />
     <state width="978" height="308" key="GridCell.Tab.1.bottom" timestamp="1590544350174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -190,10 +200,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="978" height="308" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590544350174" />
-    <state x="184" y="86" key="MergeDialog" timestamp="1592509113001">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592509113001" />
     <state x="92" y="92" width="1736" height="856" key="ShowDiffWithBranchDialog" timestamp="1589924387013">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -206,10 +212,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589923576145" />
-    <state x="721" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592509106139">
+    <state x="721" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589989891735">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="721" y="232" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592509106139" />
+    <state x="721" y="232" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589989891735" />
     <state x="744" y="307" key="git4idea.merge.GitMergeDialog" timestamp="1589923745604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

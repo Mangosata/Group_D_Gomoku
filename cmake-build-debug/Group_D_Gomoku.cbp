@@ -74,13 +74,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="F:/Group_D_Gomoku/game.c">
+		<Unit filename="F:/Group_D_Gomoku/include/board/board.h">
 			<Option target="Group_D_Gomoku"/>
 		</Unit>
-		<Unit filename="F:/Group_D_Gomoku/game.h">
+		<Unit filename="F:/Group_D_Gomoku/include/game/game.h">
 			<Option target="Group_D_Gomoku"/>
 		</Unit>
-		<Unit filename="F:/Group_D_Gomoku/main.c">
+		<Unit filename="F:/Group_D_Gomoku/src/board/board.c">
+			<Option target="Group_D_Gomoku"/>
+		</Unit>
+		<Unit filename="F:/Group_D_Gomoku/src/game/game.c">
+			<Option target="Group_D_Gomoku"/>
+		</Unit>
+		<Unit filename="F:/Group_D_Gomoku/src/main.c">
 			<Option target="Group_D_Gomoku"/>
 		</Unit>
 		<Unit filename="F:/Group_D_Gomoku/CMakeLists.txt">

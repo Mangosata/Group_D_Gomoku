@@ -1,48 +1,23 @@
-//
-// Created by bin jia on 2020/5/30.
-//
+#include "../../include/game/game.h"
 
-#include "../../include/game.h"
-
-void initBoard(char board[ROWS][COLS]) {
-    int i, j;
-
-    for (i = 0; i <= ROWS; i++) {
-        for (j = 0; j <= COLS; j++) {
-            if (0 == i) {
-                printf("%3d", j);
-            } else if (j == 0) {
-                printf("%3d", i);
-            } else if (1 == board[i][j]) {
-                printf(" X");
-            } else {
-                printf(" *");
-            }
-        }
-        printf("\n");
-    }
+/*
+ * Todo: implement player_move and complete the description for this function, after completed, please delete todo.
+ * @Author: Tingyu Ye,
+ * @Parameter: int board_size, char board[][board_size], int player_name,
+ * @Return: void,
+ * @Description:
+ */
+void player_move(int board_size, char board[][board_size], int player_name) {
+    ;
 }
 
-/* Todo: checkWinner
- * Assignee: Tingye Yu
- * */
-//void checkWinner(char board[ROWS][COLS]) {
-//    ;
-//}
-
-
-/* Todo: playerMove
- * Assignee: Bin Jia
- *
- * */
-//void playerMove(char board[ROWS][COLS], int row, int col) {
-//    ;
-//}
-
-/* Todo: isFullBoard
- * Assignee: Hongzhi Zhang
- *
+/*
+ * Todo: implement player_move and complete the description for this function, after completed, please delete todo.
+ * @Author: Tingyu Ye,
+ * @Parameter: int board_size, char board[][board_size], int player_name,
+ * @Return: ?,
+ * @Description:
  */
-char* isFullBoard(char board[ROWS][COLS]) {
+int check_winner(int board_size, char board[][board_size], int player_name) {
     ;
 }
