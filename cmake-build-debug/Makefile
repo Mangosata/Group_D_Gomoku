@@ -176,6 +176,33 @@ src/game/game.c.s:
 	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.s
 .PHONY : src/game/game.c.s
 
+src/graphic/graphic.obj: src/graphic/graphic.c.obj
+
+.PHONY : src/graphic/graphic.obj
+
+# target to build an object file
+src/graphic/graphic.c.obj:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/graphic/graphic.c.obj
+.PHONY : src/graphic/graphic.c.obj
+
+src/graphic/graphic.i: src/graphic/graphic.c.i
+
+.PHONY : src/graphic/graphic.i
+
+# target to preprocess a source file
+src/graphic/graphic.c.i:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/graphic/graphic.c.i
+.PHONY : src/graphic/graphic.c.i
+
+src/graphic/graphic.s: src/graphic/graphic.c.s
+
+.PHONY : src/graphic/graphic.s
+
+# target to generate assembly for a file
+src/graphic/graphic.c.s:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/graphic/graphic.c.s
+.PHONY : src/graphic/graphic.c.s
+
 src/main.obj: src/main.c.obj
 
 .PHONY : src/main.obj
@@ -218,6 +245,9 @@ help:
 	@echo ... src/game/game.obj
 	@echo ... src/game/game.i
 	@echo ... src/game/game.s
+	@echo ... src/graphic/graphic.obj
+	@echo ... src/graphic/graphic.i
+	@echo ... src/graphic/graphic.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
