@@ -26,16 +26,26 @@ The C compiler identification is MSVC, found in "E:/360MoveData/Users/Administra
 Determining if the C compiler works passed with the following output:
 Change Dir: E:/360MoveData/Users/Administrator/Documents/GitHub/Group_D_Gomoku/out/build/x64-Debug (默认值)/CMakeFiles/CMakeTmp
 
+<<<<<<< Updated upstream
 Run Build Command(s):D:\MVS\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe cmTC_298e5 && [1/2] Building C object CMakeFiles\cmTC_298e5.dir\testCCompiler.c.obj
 [2/2] Linking C executable cmTC_298e5.exe
+=======
+Run Build Command(s):D:\MVS\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe cmTC_c0a1f && [1/2] Building C object CMakeFiles\cmTC_c0a1f.dir\testCCompiler.c.obj
+[2/2] Linking C executable cmTC_c0a1f.exe
+>>>>>>> Stashed changes
 
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: E:/360MoveData/Users/Administrator/Documents/GitHub/Group_D_Gomoku/out/build/x64-Debug (默认值)/CMakeFiles/CMakeTmp
 
+<<<<<<< Updated upstream
 Run Build Command(s):D:\MVS\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe cmTC_d8ce0 && [1/2] Building C object CMakeFiles\cmTC_d8ce0.dir\CMakeCCompilerABI.c.obj
 [2/2] Linking C executable cmTC_d8ce0.exe
+=======
+Run Build Command(s):D:\MVS\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe cmTC_31976 && [1/2] Building C object CMakeFiles\cmTC_31976.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_31976.exe
+>>>>>>> Stashed changes
 
 
 

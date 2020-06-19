@@ -3,4 +3,8 @@ project(Group_D_Gomoku C)
 
 set(CMAKE_C_STANDARD 99)
 
+<<<<<<< Updated upstream
 add_executable(Group_D_Gomoku main.c)
+=======
+add_executable(Group_D_Gomoku src/main.c include/game/game.h src/game/game.c include/board/board.h src/board/board.c "include/init/init.h")
+>>>>>>> Stashed changes
