@@ -104,6 +104,7 @@
       <workItem from="1592603432815" duration="29000" />
       <workItem from="1592603765541" duration="2359000" />
       <workItem from="1592606516144" duration="9064000" />
+      <workItem from="1592679708632" duration="308000" />
     </task>
     <task id="LOCAL-00001" summary="making interface">
       <created>1592546893008</created>
@@ -126,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592621097160</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Complete the basic graphic.c including board and stone.">
+      <created>1592679818144</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592679818144</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +171,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Complete the basic graphic.c including board and stone." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="842" y="382" width="625" height="471" key="#Notifications" timestamp="1592679776046">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="842" y="382" width="625" height="471" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1592679776046" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592539749573">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -199,14 +211,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="ShowDiffWithBranchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589924387013" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592621099811">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592679819973">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592621099811" />
-    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589923576145">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592679819973" />
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592679744199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589923576145" />
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592679744199" />
+    <state x="721" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592679786033">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="721" y="232" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592679786033" />
     <state x="744" y="307" key="git4idea.merge.GitMergeDialog" timestamp="1589923745604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
