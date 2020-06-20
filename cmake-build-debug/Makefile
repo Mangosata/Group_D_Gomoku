@@ -122,32 +122,113 @@ Group_D_Gomoku/fast:
 	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/build
 .PHONY : Group_D_Gomoku/fast
 
-main.obj: main.c.obj
+src/board/board.obj: src/board/board.c.obj
 
-.PHONY : main.obj
+.PHONY : src/board/board.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/main.c.obj
-.PHONY : main.c.obj
+src/board/board.c.obj:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/board/board.c.obj
+.PHONY : src/board/board.c.obj
 
-main.i: main.c.i
+src/board/board.i: src/board/board.c.i
 
-.PHONY : main.i
+.PHONY : src/board/board.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/main.c.i
-.PHONY : main.c.i
+src/board/board.c.i:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/board/board.c.i
+.PHONY : src/board/board.c.i
 
-main.s: main.c.s
+src/board/board.s: src/board/board.c.s
 
-.PHONY : main.s
+.PHONY : src/board/board.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/main.c.s
-.PHONY : main.c.s
+src/board/board.c.s:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/board/board.c.s
+.PHONY : src/board/board.c.s
+
+src/game/game.obj: src/game/game.c.obj
+
+.PHONY : src/game/game.obj
+
+# target to build an object file
+src/game/game.c.obj:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.obj
+.PHONY : src/game/game.c.obj
+
+src/game/game.i: src/game/game.c.i
+
+.PHONY : src/game/game.i
+
+# target to preprocess a source file
+src/game/game.c.i:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.i
+.PHONY : src/game/game.c.i
+
+src/game/game.s: src/game/game.c.s
+
+.PHONY : src/game/game.s
+
+# target to generate assembly for a file
+src/game/game.c.s:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.s
+.PHONY : src/game/game.c.s
+
+src/graphic/graphic.obj: src/graphic/graphic.c.obj
+
+.PHONY : src/graphic/graphic.obj
+
+# target to build an object file
+src/graphic/graphic.c.obj:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/graphic/graphic.c.obj
+.PHONY : src/graphic/graphic.c.obj
+
+src/graphic/graphic.i: src/graphic/graphic.c.i
+
+.PHONY : src/graphic/graphic.i
+
+# target to preprocess a source file
+src/graphic/graphic.c.i:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/graphic/graphic.c.i
+.PHONY : src/graphic/graphic.c.i
+
+src/graphic/graphic.s: src/graphic/graphic.c.s
+
+.PHONY : src/graphic/graphic.s
+
+# target to generate assembly for a file
+src/graphic/graphic.c.s:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/graphic/graphic.c.s
+.PHONY : src/graphic/graphic.c.s
+
+src/main.obj: src/main.c.obj
+
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.c.obj:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/main.c.obj
+.PHONY : src/main.c.obj
+
+src/main.i: src/main.c.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) -f CMakeFiles\Group_D_Gomoku.dir\build.make CMakeFiles/Group_D_Gomoku.dir/src/main.c.s
+.PHONY : src/main.c.s
 
 # Help Target
 help:
@@ -158,9 +239,18 @@ help:
 	@echo ... Group_D_Gomoku
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... src/board/board.obj
+	@echo ... src/board/board.i
+	@echo ... src/board/board.s
+	@echo ... src/game/game.obj
+	@echo ... src/game/game.i
+	@echo ... src/game/game.s
+	@echo ... src/graphic/graphic.obj
+	@echo ... src/graphic/graphic.i
+	@echo ... src/graphic/graphic.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 .PHONY : help
 
 
