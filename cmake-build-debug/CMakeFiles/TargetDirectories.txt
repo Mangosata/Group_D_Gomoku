@@ -1,3 +1,0 @@
-F:/Group_D_Gomoku/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir
-F:/Group_D_Gomoku/cmake-build-debug/CMakeFiles/edit_cache.dir
-F:/Group_D_Gomoku/cmake-build-debug/CMakeFiles/rebuild_cache.dir

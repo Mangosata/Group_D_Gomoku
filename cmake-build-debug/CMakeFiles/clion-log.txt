@@ -1,4 +1,0 @@
-"F:\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" F:\Group_D_Gomoku
--- Configuring done
--- Generating done
--- Build files have been written to: F:/Group_D_Gomoku/cmake-build-debug
