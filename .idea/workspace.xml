@@ -35,12 +35,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="making interface">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/graphic/graphic.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/graphic/graphic.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphic/graphic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphic/graphic.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
-    </list>
+    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="Complete the basic graphic.c including board and stone." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,7 +103,7 @@
       <workItem from="1592601652919" duration="914000" />
       <workItem from="1592603432815" duration="29000" />
       <workItem from="1592603765541" duration="2359000" />
-      <workItem from="1592606516144" duration="8790000" />
+      <workItem from="1592606516144" duration="9064000" />
     </task>
     <task id="LOCAL-00001" summary="making interface">
       <created>1592546893008</created>
@@ -124,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592546947695</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Complete the basic graphic.c including board and stone.">
+      <created>1592621097160</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592621097160</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +159,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first version" />
     <MESSAGE value="making interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="making interface" />
+    <MESSAGE value="Complete the basic graphic.c including board and stone." />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete the basic graphic.c including board and stone." />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592539749573">
@@ -172,22 +175,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592603460472" />
-    <state width="1877" height="316" key="GridCell.Tab.0.bottom" timestamp="1592620365849">
+    <state width="1877" height="316" key="GridCell.Tab.0.bottom" timestamp="1592621186195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="316" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592620365849" />
-    <state width="1877" height="316" key="GridCell.Tab.0.center" timestamp="1592620365849">
+    <state width="1877" height="316" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592621186195" />
+    <state width="1877" height="316" key="GridCell.Tab.0.center" timestamp="1592621186194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="316" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592620365849" />
-    <state width="1877" height="316" key="GridCell.Tab.0.left" timestamp="1592620365849">
+    <state width="1877" height="316" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592621186194" />
+    <state width="1877" height="316" key="GridCell.Tab.0.left" timestamp="1592621186194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="316" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592620365849" />
-    <state width="1877" height="316" key="GridCell.Tab.0.right" timestamp="1592620365849">
+    <state width="1877" height="316" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592621186194" />
+    <state width="1877" height="316" key="GridCell.Tab.0.right" timestamp="1592621186194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="316" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592620365849" />
+    <state width="1877" height="316" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592621186194" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1592536576656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -196,10 +199,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="ShowDiffWithBranchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589924387013" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592546894504">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592621099811">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592546894504" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592621099811" />
     <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589923576145">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
