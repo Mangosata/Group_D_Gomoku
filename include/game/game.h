@@ -10,11 +10,6 @@
 #include <time.h>
 #include <stdlib.h>
 
-//void initGame(int BoardSize);
-//void initBoard(char board[ROWS][COLS]);
-//void computerMove(char board[ROWS][COLS], int row, int col);
-//char* modeSelect(char* mode);
-
 void generate_patterns(void);
 void display_board(int board_size, char board[][board_size]);
 int select_board_size(void);
