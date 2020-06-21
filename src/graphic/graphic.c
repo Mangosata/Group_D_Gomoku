@@ -2,7 +2,7 @@
 #include "../../include/graphic_logic/logic.h"
 
 static cairo_surface_t *surface = NULL;
-int flag = 0;
+int player = 0;
 
 static void clear_surface(void) {
     cairo_t *cr;
@@ -53,7 +53,6 @@ static gboolean draw_board(GtkWidget *widget, cairo_t *cr, cairo_t *cr1, cairo_t
     }
 
     cairo_stroke_preserve(cr);
-    //cairo_set_source_rgb(cr, 1, 1, 1);
     cairo_destroy(cr);
     cairo_destroy(cr1);
 
@@ -61,7 +60,8 @@ static gboolean draw_board(GtkWidget *widget, cairo_t *cr, cairo_t *cr1, cairo_t
     return FALSE;
 }
 
-/* Redraw the screen from the surface. Note that the ::draw
+/*
+ * Redraw the screen from the surface. Note that the ::draw
  * signal receives a ready-to-be-used cairo_t that is already
  * clipped to only draw the exposed areas of the widget
  */
@@ -83,11 +83,10 @@ static void draw_stone(GtkWidget *widget,
                        gdouble y) {
 
     cairo_t *cr;
-    if (flag == 0) {
+    if (player == 0) {
         cr = cairo_create(surface);
 
         cairo_set_source_rgb(cr, 0, 0, 0);
-//    cairo_rectangle (cr, x - 3, y - 3, 6, 6);
         cairo_arc(cr, x, y , 10, 0, 2 * G_PI);
         cairo_fill(cr);
 
@@ -95,7 +94,7 @@ static void draw_stone(GtkWidget *widget,
 
         /* Now invalidate the affected region of the drawing area. */
         gtk_widget_queue_draw(widget);
-        flag = 1;
+        player = 1;
     } else {
         cr = cairo_create(surface);
 
@@ -106,7 +105,7 @@ static void draw_stone(GtkWidget *widget,
         cairo_destroy(cr);
 
         gtk_widget_queue_draw(widget);
-        flag = 0;
+        player = 0;
     }
 }
 
@@ -127,7 +126,7 @@ static gboolean button_press_event_cb(GtkWidget *widget,
         return FALSE;
 
     /*
-     * If mouse clicks near the intersection, set the flag = 1,
+     * If mouse clicks near the intersection, set the player = 1,
      * only when xflag and yflag both satisfy the requirements,
      * then put the stone.
      */
@@ -142,7 +141,7 @@ static gboolean button_press_event_cb(GtkWidget *widget,
 
     if (event->button == GDK_BUTTON_PRIMARY && xflag == 1 && yflag == 1) {
         /* Check if the stone is overlay */
-        if (put_stone_logic(event->x, event->y) == 1) {
+        if (put_stone_logic(event->x, event->y, player) != 0) {
             draw_stone(widget, (int) (event->x / 25 + 0.5) * 25, (int) (event->y / 25 + 0.5) * 25);
         }
     }
