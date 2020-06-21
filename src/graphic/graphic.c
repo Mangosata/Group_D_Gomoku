@@ -1,4 +1,5 @@
 #include "../../include/graphic/graphic.h"
+#include "../../include/graphic_logic/logic.h"
 
 static cairo_surface_t *surface = NULL;
 int flag = 0;
@@ -11,7 +12,9 @@ static void clear_surface(void) {
     cairo_destroy(cr);
 }
 
-/* Create a new surface of the appropriate size to store our scribbles */
+/*
+ * Create a new surface of the appropriate size to store our stones
+ */
 static gboolean configure_event_cb(GtkWidget *widget,
                                    GdkEventConfigure *event,
                                    gpointer data) {
@@ -24,11 +27,14 @@ static gboolean configure_event_cb(GtkWidget *widget,
                                                 gtk_widget_get_allocated_height(widget));
     /* Initialize the surface to white */
     clear_surface();
-
     /* We've handled the configure event, no need for further processing. */
     return TRUE;
 }
 
+
+/*
+ * Draw the board with background color.
+ */
 static gboolean draw_board(GtkWidget *widget, cairo_t *cr, gpointer user_data) {
     cr = gdk_cairo_create(gtk_widget_get_window(widget));
 
@@ -60,7 +66,10 @@ static gboolean draw_cb(GtkWidget *widget,
     return FALSE;
 }
 
-/* Draw a rectangle on the surface at the given position */
+/*
+ * Draw the white stone and black stone, player 1 is black,
+ * player 2 is white.
+ */
 static void draw_stone(GtkWidget *widget,
                        gdouble x,
                        gdouble y) {
@@ -70,8 +79,7 @@ static void draw_stone(GtkWidget *widget,
         cr = cairo_create(surface);
 
         cairo_set_source_rgb(cr, 0, 0, 0);
-//    cairo_rectangle (cr, x - 3, y - 3, 6, 6);
-        cairo_arc(cr, x - 3, y - 3, 10, 0, 2 * G_PI);
+        cairo_arc(cr, x, y, 10, 0, 2 * G_PI);
         cairo_fill(cr);
 
         cairo_destroy(cr);
@@ -83,7 +91,7 @@ static void draw_stone(GtkWidget *widget,
         cr = cairo_create(surface);
 
         cairo_set_source_rgb(cr, 1, 0, 0);
-        cairo_arc(cr, x - 3, y - 3, 10, 0, 2 * G_PI);
+        cairo_arc(cr, x, y, 10, 0, 2 * G_PI);
         cairo_fill(cr);
 
         cairo_destroy(cr);
@@ -93,40 +101,44 @@ static void draw_stone(GtkWidget *widget,
     }
 }
 
-/* Handle button press events by either drawing a rectangle
- * or clearing the surface, depending on which button was pressed.
- * The ::button-press signal handler receives a GdkEventButton
- * struct which contains this information.
+/*
+ * Handle button press events by putting a stone,
+ * depending which player is playing now.
+ * The button-press signal handler receives
+ * a GdkEventButton struct which contains this information.
  */
 static gboolean button_press_event_cb(GtkWidget *widget,
                                       GdkEventButton *event,
                                       gpointer data) {
     int xflag = 0, yflag = 0;
-//    printf("come into press\n");
 
     /* paranoia check, in case we haven't gotten a configure event */
     if (surface == NULL)
         return FALSE;
+
+    /*
+     * If mouse clicks near the intersection, set the flag = 1,
+     * only when xflag and yflag both satisfy the requirements,
+     * then put the stone.
+     */
     if (event->x >= 90 && event->x <= 560 &&
-        (fmod(event->x, 25) <= 10 || fmod(event->x, 25) >= 20)) {
+        (fmod(event->x, 25) <= 10 || fmod(event->x, 25) >= 15)) {
         xflag = 1;
     }
     if (event->y >= 90 && event->y <= 560 &&
-        (fmod(event->y, 25) <= 10 || fmod(event->y, 25) >= 20)) {
+        (fmod(event->y, 25) <= 10 || fmod(event->y, 25) >= 15)) {
         yflag = 1;
     }
 
     if (event->button == GDK_BUTTON_PRIMARY && xflag == 1 && yflag == 1) {
-        draw_stone(widget, (int) (event->x / 25 + 0.5) * 25, (int) (event->y / 25 + 0.5) * 25);
-    } else if (event->button == GDK_BUTTON_SECONDARY) {
-        clear_surface();
-        gtk_widget_queue_draw(widget);
+        /* Check if the stone is overlay */
+        if (put_stone_logic(event->x, event->y) == 1) {
+            draw_stone(widget, (int) (event->x / 25 + 0.5) * 25, (int) (event->y / 25 + 0.5) * 25);
+        }
     }
 
-    /* We've handled the event, stop processing */
     return TRUE;
 }
-
 
 static void close_window(void) {
     if (surface)
@@ -135,6 +147,9 @@ static void close_window(void) {
     gtk_main_quit();
 }
 
+/*
+ * Generate the graphic window.
+ */
 void activate(GtkApplication *app, gpointer user_data) {
     GtkWidget *window;
     GtkWidget *frame;

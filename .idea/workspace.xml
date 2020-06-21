@@ -19,8 +19,9 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/bjia" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
@@ -35,24 +36,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="deleted some images">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Group_D_Gomoku.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Group_D_Gomoku.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/query/client-MicrosoftVS/query.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.16.19112601-MSVC_2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.16.19112601-MSVC_2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.16.19112601-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.16.19112601-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/ShowIncludes/foo.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/VSInheritEnvironments.txt" beforeDir="false" />
+    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="add gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphic/graphic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphic/graphic.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +57,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectId" id="1c9AOcBCWquxkkYR6noQNDvEgMy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -166,11 +154,28 @@
       <option name="project" value="LOCAL" />
       <updated>1592689751659</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add gitignore">
+      <created>1592690133102</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1592690133102</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -183,7 +188,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/bjia" />
                       </list>
                     </value>
                   </entry>
@@ -200,19 +205,19 @@
     <MESSAGE value="first version" />
     <MESSAGE value="making interface" />
     <MESSAGE value="Complete the basic graphic.c including board and stone." />
-    <MESSAGE value="add gitignore" />
     <MESSAGE value="deleted some images" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted some images" />
+    <MESSAGE value="add gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="842" y="382" width="625" height="471" key="#Notifications" timestamp="1592679776046">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="842" y="382" width="625" height="471" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1592679776046" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592539749573">
+    <state x="481" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592696384267">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592539749573" />
+    <state x="481" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592696384267" />
     <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1592539747003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -221,22 +226,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592603460472" />
-    <state width="1877" height="316" key="GridCell.Tab.0.bottom" timestamp="1592689819767">
+    <state width="1877" height="316" key="GridCell.Tab.0.bottom" timestamp="1592703031469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="316" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592689819767" />
-    <state width="1877" height="316" key="GridCell.Tab.0.center" timestamp="1592689819767">
+    <state width="1877" height="316" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592703031469" />
+    <state width="1877" height="316" key="GridCell.Tab.0.center" timestamp="1592703031469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="316" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592689819767" />
-    <state width="1877" height="316" key="GridCell.Tab.0.left" timestamp="1592689819767">
+    <state width="1877" height="316" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592703031469" />
+    <state width="1877" height="316" key="GridCell.Tab.0.left" timestamp="1592703031469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="316" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592689819767" />
-    <state width="1877" height="316" key="GridCell.Tab.0.right" timestamp="1592689819767">
+    <state width="1877" height="316" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592703031469" />
+    <state width="1877" height="316" key="GridCell.Tab.0.right" timestamp="1592703031469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="316" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592689819767" />
+    <state width="1877" height="316" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592703031469" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1592697354727">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592697354727" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1592697354727">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592697354727" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1592697354727">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592697354727" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1592697354727">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592697354727" />
+    <state x="822" y="240" key="RollbackChangesDialog" timestamp="1592690147248">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="822" y="240" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592690147248" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1592536576656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -245,10 +270,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="ShowDiffWithBranchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589924387013" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592689752886">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1592690424230">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592689752886" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592690424230" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592690134154">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592690134154" />
     <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592679744199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
