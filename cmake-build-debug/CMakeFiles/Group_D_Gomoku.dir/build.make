@@ -59,41 +59,41 @@ include CMakeFiles/Group_D_Gomoku.dir/flags.make
 CMakeFiles/Group_D_Gomoku.dir/src/main.c.obj: CMakeFiles/Group_D_Gomoku.dir/flags.make
 CMakeFiles/Group_D_Gomoku.dir/src/main.c.obj: ../src/main.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Group_D_Gomoku\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Group_D_Gomoku.dir/src/main.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Group_D_Gomoku.dir\src\main.c.obj   -c F:\Group_D_Gomoku\src\main.c
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Group_D_Gomoku.dir\src\main.c.obj   -c F:\Group_D_Gomoku\src\main.c
 
 CMakeFiles/Group_D_Gomoku.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Group_D_Gomoku.dir/src/main.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Group_D_Gomoku\src\main.c > CMakeFiles\Group_D_Gomoku.dir\src\main.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Group_D_Gomoku\src\main.c > CMakeFiles\Group_D_Gomoku.dir\src\main.c.i
 
 CMakeFiles/Group_D_Gomoku.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Group_D_Gomoku.dir/src/main.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Group_D_Gomoku\src\main.c -o CMakeFiles\Group_D_Gomoku.dir\src\main.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Group_D_Gomoku\src\main.c -o CMakeFiles\Group_D_Gomoku.dir\src\main.c.s
 
 CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.obj: CMakeFiles/Group_D_Gomoku.dir/flags.make
 CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.obj: ../src/game/game.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Group_D_Gomoku\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Group_D_Gomoku.dir\src\game\game.c.obj   -c F:\Group_D_Gomoku\src\game\game.c
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Group_D_Gomoku.dir\src\game\game.c.obj   -c F:\Group_D_Gomoku\src\game\game.c
 
 CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Group_D_Gomoku\src\game\game.c > CMakeFiles\Group_D_Gomoku.dir\src\game\game.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Group_D_Gomoku\src\game\game.c > CMakeFiles\Group_D_Gomoku.dir\src\game\game.c.i
 
 CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Group_D_Gomoku.dir/src/game/game.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Group_D_Gomoku\src\game\game.c -o CMakeFiles\Group_D_Gomoku.dir\src\game\game.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Group_D_Gomoku\src\game\game.c -o CMakeFiles\Group_D_Gomoku.dir\src\game\game.c.s
 
 CMakeFiles/Group_D_Gomoku.dir/src/board/board.c.obj: CMakeFiles/Group_D_Gomoku.dir/flags.make
 CMakeFiles/Group_D_Gomoku.dir/src/board/board.c.obj: ../src/board/board.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Group_D_Gomoku\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Group_D_Gomoku.dir/src/board/board.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Group_D_Gomoku.dir\src\board\board.c.obj   -c F:\Group_D_Gomoku\src\board\board.c
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Group_D_Gomoku.dir\src\board\board.c.obj   -c F:\Group_D_Gomoku\src\board\board.c
 
 CMakeFiles/Group_D_Gomoku.dir/src/board/board.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Group_D_Gomoku.dir/src/board/board.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Group_D_Gomoku\src\board\board.c > CMakeFiles\Group_D_Gomoku.dir\src\board\board.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Group_D_Gomoku\src\board\board.c > CMakeFiles\Group_D_Gomoku.dir\src\board\board.c.i
 
 CMakeFiles/Group_D_Gomoku.dir/src/board/board.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Group_D_Gomoku.dir/src/board/board.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Group_D_Gomoku\src\board\board.c -o CMakeFiles\Group_D_Gomoku.dir\src\board\board.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Group_D_Gomoku\src\board\board.c -o CMakeFiles\Group_D_Gomoku.dir\src\board\board.c.s
 
 # Object files for target Group_D_Gomoku
 Group_D_Gomoku_OBJECTS = \

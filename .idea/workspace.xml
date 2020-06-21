@@ -19,8 +19,9 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/bjia" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
@@ -35,24 +36,26 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="complete folder structures">
-      <change afterPath="$PROJECT_DIR$/include/board/board.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/game/game.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board/board.c" afterDir="false" />
+    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="modify main.c to run">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Group_D_Gomoku.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Group_D_Gomoku.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Group_D_Gomoku.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/game.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/board/board.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/board/board.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/game/game.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/game/game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/board.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/board.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/game.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/game.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
     </list>
@@ -68,10 +71,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Tingyu" />
+        <entry key="$PROJECT_DIR$" value="Development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectId" id="1c9AOcBCWquxkkYR6noQNDvEgMy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -92,11 +96,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Group_D_Gomoku\include\game" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunManager">
     <configuration name="Group_D_Gomoku" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Group_D_Gomoku" TARGET_NAME="Group_D_Gomoku" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Group_D_Gomoku" RUN_TARGET_NAME="Group_D_Gomoku">
@@ -106,7 +106,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="CMake Application.Group_D_Gomoku" />
         <item itemvalue="CMake Application.Group_D_Gomoku" />
       </list>
     </recent_temporary>
@@ -130,6 +129,14 @@
       <workItem from="1590890941234" duration="863000" />
       <workItem from="1591246227989" duration="1569000" />
     </task>
+    <task id="LOCAL-00001" summary="modify main.c to run">
+      <created>1592782152253</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592782152253</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +145,31 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:F:/Group_D_Gomoku/include/graphic" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -146,7 +178,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/tingyu" />
                       </list>
                     </value>
                   </entry>
@@ -157,33 +189,39 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first version" />
-    <option name="LAST_COMMIT_MESSAGE" value="first version" />
+    <MESSAGE value="modify main.c to run" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify main.c to run" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="391" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591247172552">
+    <state x="391" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592782069021">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="391" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591247172552" />
-    <state width="1877" height="332" key="GridCell.Tab.0.bottom" timestamp="1592512215905">
+    <state x="391" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592782069021" />
+    <state width="1877" height="308" key="GridCell.Tab.0.bottom" timestamp="1592782379660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592512215905" />
-    <state width="1877" height="332" key="GridCell.Tab.0.center" timestamp="1592512215905">
+    <state width="1877" height="308" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592782379660" />
+    <state width="1877" height="308" key="GridCell.Tab.0.center" timestamp="1592782379660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="332" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592512215905" />
-    <state width="1877" height="332" key="GridCell.Tab.0.left" timestamp="1592512215905">
+    <state width="1877" height="308" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592782379660" />
+    <state width="1877" height="308" key="GridCell.Tab.0.left" timestamp="1592782379660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="332" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592512215905" />
-    <state width="1877" height="332" key="GridCell.Tab.0.right" timestamp="1592512215905">
+    <state width="1877" height="308" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592782379660" />
+    <state width="1877" height="308" key="GridCell.Tab.0.right" timestamp="1592782379660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="332" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592512215905" />
+    <state width="1877" height="308" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592782379660" />
     <state width="978" height="308" key="GridCell.Tab.1.bottom" timestamp="1590544350174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -200,18 +238,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="978" height="308" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590544350174" />
+    <state x="130" y="93" width="795" height="567" key="MultipleFileMergeDialog" timestamp="1592782199352">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="130" y="93" width="795" height="567" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592782199352" />
+    <state x="752" y="240" key="RollbackChangesDialog" timestamp="1592782268784">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="240" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592782268784" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1592782090752">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1592782090752" />
     <state x="92" y="92" width="1736" height="856" key="ShowDiffWithBranchDialog" timestamp="1589924387013">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="ShowDiffWithBranchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589924387013" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589989899534">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592782101687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589989899534" />
-    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589923576145">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592782101687" />
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592780714967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589923576145" />
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592780714967" />
     <state x="721" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589989891735">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -220,10 +270,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="744" y="307" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589923745604" />
-    <state x="634" y="307" key="git4idea.merge.GitPullDialog" timestamp="1589989844233">
+    <state x="634" y="307" key="git4idea.merge.GitPullDialog" timestamp="1592782158293">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="634" y="307" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589989844233" />
+    <state x="634" y="307" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592782158293" />
     <state x="769" y="414" key="git4idea.ui.GitResetDialog" timestamp="1589923765201">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
