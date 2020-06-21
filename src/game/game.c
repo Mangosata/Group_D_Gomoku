@@ -1,12 +1,37 @@
 #include "../../include/game/game.h"
 
-#define PATTERN_SIZE 5
+/* 
+ * PATTERN_SIZE defines the number of elements in a straight line required to win the game 
+ */
+#define PATTERN_SIZE 5 
+
+/* 
+ * NUMBER_OF_PATTERNS defines the number of total patterns in which a player can win.  
+ */
 #define NUMBER_OF_PATTERNS 4
+
+/* 
+ * the pattern array is defined as a global variable because it will consume more resources
+ * if it will generate the arrays every time while using the winner function
+ */
 int pattern [NUMBER_OF_PATTERNS][PATTERN_SIZE][PATTERN_SIZE];
 
+/*
+ * @Parameter: void,
+ * @Return: void,
+ * @Description: This function will generate the 4 different patterns that will be used for checking the status of victory.
+ * In the game of Gomoku, a player can win if he/she has 5 same color stones in any of the below 4 cases:
+ * 1. Vertical 		(90 degrees)
+ * 2. Horizontal	(0 degrees)
+ * 3. Diagonal 		(45 degrees)
+ * 4. Diagonal 		(135 degrees)
+ */
+
 void generate_patterns(void){
-	//Generating Patterns to check the winner status
-	//Pattern 1
+	
+	/*
+	 * Pattern 1 -> Vertical (90 degrees)
+	 */
 	for (int i = 0; i < PATTERN_SIZE; i++){
 		for (int j = 0; j < PATTERN_SIZE; j++){
 			if ( i == 0 ){
@@ -17,10 +42,13 @@ void generate_patterns(void){
 			}
 		}
 	}
-	//Pattern 2
+	
+	/*
+	 * Pattern 2 ->  Horizontal (0 degrees)
+	 */
 	for (int i = 0; i < PATTERN_SIZE; i++){
 		for (int j = 0; j < PATTERN_SIZE; j++){
-			if ( i == j ){
+			if ( j == 0 ){
 				pattern[1][i][j] = 1;
 			}
 			else{
@@ -28,10 +56,13 @@ void generate_patterns(void){
 			}
 		}
 	}
-	//Pattern 3
+	
+	/*
+	 * Pattern 3 -> Diagonal (135 degrees)
+	 */
 	for (int i = 0; i < PATTERN_SIZE; i++){
 		for (int j = 0; j < PATTERN_SIZE; j++){
-			if ( j == 0 ){
+			if ( i == j ){
 				pattern[2][i][j] = 1;
 			}
 			else{
@@ -39,7 +70,10 @@ void generate_patterns(void){
 			}
 		}
 	}
-	//Pattern 4
+	
+	/*
+	 * Pattern 4 -> Diagonal (145 degrees)
+	 */
 	for (int i = 0; i < PATTERN_SIZE; i++){
 		for (int j = 0; j < PATTERN_SIZE; j++){
 			if ( i+j == PATTERN_SIZE-1 ){
@@ -50,9 +84,16 @@ void generate_patterns(void){
 			}
 		}
 	}
-	//Patterns are generated
 }
 
+/*
+ * @Parameter: int board_size, char board[][board_size],
+ * @Return: void,
+ * @Description: This function is for console version, where the board is displayed in "-", "X" and "O" signs.
+ * "-" is representing the empty block
+ * "X" is representing the black stone
+ * "O" is representing the white stone
+ */
 void display_board(int board_size, char board[][board_size]){
 	for (int i = 0; i < board_size; i++){
 		for (int j = 0; j < board_size; j++){
@@ -71,6 +112,13 @@ void display_board(int board_size, char board[][board_size]){
 	return;
 }
 
+/*
+ * @Parameter: void,
+ * @Return: int,
+ * @Description: This function is made for the console version where in this function an input will taken from to select the board size.
+ * User will have to input "1" if user want to play on 15x15 board or "2" if user want to play on 19x19 board.
+ * The returned value is the board size, the function will return 15 or 19 depending upon the user's input.
+ */
 int select_board_size(void){
 	int board_size, select_board;
 	SELECTSIZE: printf("Select the Board Size:\nPress 1 to select the 15*15 board\nPress 2 to select the 19*19 board\n\nEnter your Choice: ");
@@ -93,6 +141,13 @@ int select_board_size(void){
 	return board_size;
 }
 
+/*
+ * @Parameter: int row, int column, int board_size, char board[][board_size],
+ * @Return: int,
+ * @Description: This function is used to check if the coordinated are used before or not. This function returns an integer
+ * if the returned integer is 1, the permission to update the board coordinate's value will be declined. 
+ * Otherwise if the returned integer is 1, the permission to update the board coordinate's value will be granted.
+ */
 int update_board(int row, int column, int board_size, char board[][board_size]){
 	if (board[row][column] == 1 || board[row][column] == -1){
 		printf("!! The coordinates has already been used !!\n!! Use different coordinates !!\n");
@@ -103,6 +158,12 @@ int update_board(int row, int column, int board_size, char board[][board_size]){
 	}
 }
 
+/*
+ * @Parameter: int board_size, char board[][board_size],
+ * @Return: void,
+ * @Description: This function will check if all the spaces on the board are filled. 
+ * In the case all the spaces are filled, the function will declare the match as a TIE.
+ */
 void is_full_board(int board_size, char board[][board_size]){
 	int is_full = 0;
 	for (int i = 0; i < board_size; i++){
@@ -118,6 +179,13 @@ void is_full_board(int board_size, char board[][board_size]){
 	}
 }
 
+/*
+ * @Parameter: int board_size, char board[][board_size], int player_name,
+ * @Return: void,
+ * @Description: This function will take coordinates' value (i.e. row number and column number) from the user
+ * and check if the inputted coordinates are within defined range or not.
+ * After that it will call update_board () to check if the coordinated are already occupied or not.
+ */
 void player_move(int board_size, char board[][board_size], int player_name){
 	int row, column, update;
 	int player_sign = -1;
@@ -150,14 +218,24 @@ void player_move(int board_size, char board[][board_size], int player_name){
 	return;
 }
 
+/*
+ * @Parameter: int board_size, char board[][board_size], int player_name,
+ * @Return: int,
+ * @Description: After every turn, this function will check if there are similar numbers (representing the similar color stones) 
+ * are in a straight line vertically or horizontally or diagonally. If there is a straight line, it will print the winner's name.
+ */
+
 int check_winner(int board_size, char board[][board_size], int player_name){
-	if (board_size <= 0){
-		printf("!! Incorrect Board Size !!");
-		exit(1);
-	}
 	
+	/*
+	 * Creating an array named "winner_array" to store all the elements of board and extend it by PATTERN_SIZE - 1
+	 * to implement the pattern multiplication to get the winner status
+	 */
 	int winner_array[board_size + PATTERN_SIZE - 1][board_size + PATTERN_SIZE - 1];
-		
+	
+	/*
+	 * memset() will give the same value to all the elements of the winner_array
+	 */
 	memset(winner_array, 0, sizeof(winner_array));
 	
 	for (int i = 0; i < board_size; i++){
