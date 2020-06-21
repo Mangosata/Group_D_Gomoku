@@ -35,8 +35,20 @@ static gboolean configure_event_cb(GtkWidget *widget,
 /*
  * Draw the board with background color.
  */
-static gboolean draw_board(GtkWidget *widget, cairo_t *cr, gpointer user_data) {
-    cr = gdk_cairo_create(gtk_widget_get_window(widget));
+static gboolean draw_board(GtkWidget *widget, cairo_t *cr, cairo_t *cr1, cairo_t *cr2, cairo_t *cr3, gpointer user_data) {
+    cr = gdk_cairo_create (gtk_widget_get_window (widget));
+    cr1 = gdk_cairo_create (gtk_widget_get_window (widget));
+    cr2 = gdk_cairo_create (gtk_widget_get_window (widget));
+    cr3 = gdk_cairo_create (gtk_widget_get_window (widget));
+    cairo_set_source_rgba (cr3, 255,0,0,0.1);
+    cairo_rectangle (cr3, 0, 0, 700, 700);
+    cairo_fill (cr3);
+    cairo_set_source_rgba (cr2, 0,0,0,0.1);
+    cairo_rectangle (cr2, 0, 0, 700, 700);
+    cairo_fill (cr2);
+    cairo_set_source_rgba (cr1, 255,255,0,0.1);
+    cairo_rectangle (cr1, 0, 0, 700, 700);
+    cairo_fill (cr1);
 
     cairo_set_source_rgb(cr, 0, 0, 0);
 
@@ -48,8 +60,11 @@ static gboolean draw_board(GtkWidget *widget, cairo_t *cr, gpointer user_data) {
     }
 
     cairo_stroke_preserve(cr);
-    cairo_set_source_rgb(cr, 1, 1, 1);
+    //cairo_set_source_rgb(cr, 1, 1, 1);
     cairo_destroy(cr);
+    cairo_destroy(cr1);
+    cairo_destroy(cr2);
+    cairo_destroy(cr3);
     return FALSE;
 }
 
@@ -73,12 +88,12 @@ static gboolean draw_cb(GtkWidget *widget,
 static void draw_stone(GtkWidget *widget,
                        gdouble x,
                        gdouble y) {
-
     cairo_t *cr;
     if (flag == 0) {
         cr = cairo_create(surface);
 
         cairo_set_source_rgb(cr, 0, 0, 0);
+
         cairo_arc(cr, x, y, 10, 0, 2 * G_PI);
         cairo_fill(cr);
 
@@ -90,7 +105,7 @@ static void draw_stone(GtkWidget *widget,
     } else {
         cr = cairo_create(surface);
 
-        cairo_set_source_rgb(cr, 1, 0, 0);
+        cairo_set_source_rgb(cr, 0.7451, 0.7451, 0.7451);
         cairo_arc(cr, x, y, 10, 0, 2 * G_PI);
         cairo_fill(cr);
 
