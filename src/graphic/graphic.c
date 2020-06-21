@@ -27,6 +27,7 @@ static gboolean configure_event_cb(GtkWidget *widget,
                                                 gtk_widget_get_allocated_height(widget));
     /* Initialize the surface to white */
     clear_surface();
+
     /* We've handled the configure event, no need for further processing. */
     return TRUE;
 }
@@ -38,16 +39,8 @@ static gboolean configure_event_cb(GtkWidget *widget,
 static gboolean draw_board(GtkWidget *widget, cairo_t *cr, cairo_t *cr1, cairo_t *cr2, cairo_t *cr3, gpointer user_data) {
     cr = gdk_cairo_create (gtk_widget_get_window (widget));
     cr1 = gdk_cairo_create (gtk_widget_get_window (widget));
-//    cr2 = gdk_cairo_create (gtk_widget_get_window (widget));
-//    cr3 = gdk_cairo_create (gtk_widget_get_window (widget));
-//    cairo_set_source_rgba (cr3, 1,0,0,0.1);
-//    cairo_rectangle (cr3, 0, 0, 700, 700);
-//    cairo_fill (cr3);
-//    cairo_set_source_rgba (cr2, 0,0,0,0.1);
-//    cairo_rectangle (cr2, 0, 0, 700, 700);
-//    cairo_fill (cr2);
-    cairo_set_source_rgba (cr1, 0.72157,0.52549,0.04314,0.5);
-    cairo_rectangle (cr1, 0, 0, 700, 700);
+    cairo_set_source_rgba (cr1, 1,0.9,0.7,0.3);
+    cairo_rectangle (cr1, 0, 0, 900, 700);
     cairo_fill (cr1);
 
     cairo_set_source_rgb(cr, 0, 0, 0);
@@ -60,10 +53,11 @@ static gboolean draw_board(GtkWidget *widget, cairo_t *cr, cairo_t *cr1, cairo_t
     }
 
     cairo_stroke_preserve(cr);
+    //cairo_set_source_rgb(cr, 1, 1, 1);
     cairo_destroy(cr);
     cairo_destroy(cr1);
-//    cairo_destroy(cr2);
-//    cairo_destroy(cr3);
+
+
     return FALSE;
 }
 
@@ -87,13 +81,14 @@ static gboolean draw_cb(GtkWidget *widget,
 static void draw_stone(GtkWidget *widget,
                        gdouble x,
                        gdouble y) {
+
     cairo_t *cr;
     if (flag == 0) {
         cr = cairo_create(surface);
 
-        cairo_set_source_rgba(cr, 0, 0, 0, 1);
-
-        cairo_arc(cr, x, y, 10, 0, 2 * G_PI);
+        cairo_set_source_rgb(cr, 0, 0, 0);
+//    cairo_rectangle (cr, x - 3, y - 3, 6, 6);
+        cairo_arc(cr, x, y , 10, 0, 2 * G_PI);
         cairo_fill(cr);
 
         cairo_destroy(cr);
@@ -104,8 +99,8 @@ static void draw_stone(GtkWidget *widget,
     } else {
         cr = cairo_create(surface);
 
-        cairo_set_source_rgba(cr, 0.41176, 0.41176, 0.41176, 1);
-        cairo_arc(cr, x, y, 10, 0, 2 * G_PI);
+        cairo_set_source_rgb(cr, 0, 0, 1);
+        cairo_arc(cr, x , y , 10, 0, 2 * G_PI);
         cairo_fill(cr);
 
         cairo_destroy(cr);
@@ -125,6 +120,7 @@ static gboolean button_press_event_cb(GtkWidget *widget,
                                       GdkEventButton *event,
                                       gpointer data) {
     int xflag = 0, yflag = 0;
+//    printf("come into press\n");
 
     /* paranoia check, in case we haven't gotten a configure event */
     if (surface == NULL)
@@ -151,8 +147,10 @@ static gboolean button_press_event_cb(GtkWidget *widget,
         }
     }
 
+    /* We've handled the event, stop processing */
     return TRUE;
 }
+
 
 static void close_window(void) {
     if (surface)
@@ -182,7 +180,7 @@ void activate(GtkApplication *app, gpointer user_data) {
 
     drawing_area = gtk_drawing_area_new();
     /* set a minimum size */
-    gtk_widget_set_size_request(drawing_area, 700, 700);
+    gtk_widget_set_size_request(drawing_area, 900, 700);
 
     gtk_container_add(GTK_CONTAINER (frame), drawing_area);
 
