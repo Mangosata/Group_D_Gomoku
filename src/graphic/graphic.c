@@ -34,13 +34,13 @@ static gboolean draw_board(GtkWidget *widget, cairo_t *cr, cairo_t *cr1, cairo_t
     cr1 = gdk_cairo_create (gtk_widget_get_window (widget));
     cr2 = gdk_cairo_create (gtk_widget_get_window (widget));
     cr3 = gdk_cairo_create (gtk_widget_get_window (widget));
-    cairo_set_source_rgba (cr3, 255,0,0,1);
+    cairo_set_source_rgba (cr3, 255,0,0,0.1);
     cairo_rectangle (cr3, 0, 0, 700, 700);
     cairo_fill (cr3);
-    cairo_set_source_rgba (cr2, 0,0,0,0.5);
+    cairo_set_source_rgba (cr2, 0,0,0,0.1);
     cairo_rectangle (cr2, 0, 0, 700, 700);
     cairo_fill (cr2);
-    cairo_set_source_rgba (cr1, 255,255,0,0.5);
+    cairo_set_source_rgba (cr1, 255,255,0,0.1);
     cairo_rectangle (cr1, 0, 0, 700, 700);
     cairo_fill (cr1);
 
@@ -56,6 +56,9 @@ static gboolean draw_board(GtkWidget *widget, cairo_t *cr, cairo_t *cr1, cairo_t
     cairo_stroke_preserve(cr);
     //cairo_set_source_rgb(cr, 1, 1, 1);
     cairo_destroy(cr);
+    cairo_destroy(cr1);
+    cairo_destroy(cr2);
+    cairo_destroy(cr3);
     return FALSE;
 }
 
