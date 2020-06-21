@@ -7,9 +7,9 @@
  * @Return: int board_size,
  * @Description:
  */
-int select_board_size(void) {
-    ;
-}
+//int select_board_size(void) {
+//    ;
+//}
 
 /*
  * Todo: implement display_board and complete the description for this function, after completed, please delete todo.
@@ -18,6 +18,6 @@ int select_board_size(void) {
  * @Return: void,
  * @Description:
  */
-void display_board(int board_size, char board[][board_size]) {
-    ;
-}
+//void display_board(int board_size, char board[][board_size]) {
+//    ;
+//}
