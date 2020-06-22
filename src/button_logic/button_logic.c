@@ -66,6 +66,7 @@ void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidg
 
 	gtk_widget_show_all(window);
 	gtk_main();
+    ;
 }
 
 /*
@@ -73,6 +74,11 @@ void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidg
  * no player can put the stone,
  * and the pause button will change to resume button.
  */
-void button_pause(void) {
+void button_pause(GtkWidget *pause) {
     PAUSE_GAME = !PAUSE_GAME;
+    if(PAUSE_GAME){
+    	gtk_button_set_label(GTK_BUTTON(pause),"Resume");
+    }else{
+    	gtk_button_set_label(GTK_BUTTON(pause),"Pause");
+    }
 }

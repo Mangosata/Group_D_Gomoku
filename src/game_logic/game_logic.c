@@ -122,7 +122,7 @@ int check_winner(int board_array[ROW][COL], int player, gpointer label) {
 
         }
     }
-	
+
 	for (int i = 0; i < board_size; i++) {
         for (int j = 0; j < board_size; j++) {
 			printf("%d",board[i][j]);
@@ -142,7 +142,7 @@ int check_winner(int board_array[ROW][COL], int player, gpointer label) {
             winner_array[i][j] = board[i][j];
         }
     }
-	
+
 	for (int i = 0; i < board_size + pattern_size - 1; i++) {
         for (int j = 0; j < board_size + pattern_size - 1; j++) {
 			printf("%d",winner_array[i][j]);

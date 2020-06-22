@@ -13,7 +13,7 @@ void button_start_player(GtkWidget *widget, GtkLabel *start_label);
 void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidget *frame1,int argc, char*argv[]);
 
 /* Pause the game */
-void button_pause();
+void button_pause(GtkWidget *pause);
 
 void clear_surface(void);
 

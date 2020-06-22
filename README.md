@@ -1,4 +1,20 @@
-# Group_D_Gomoku
+﻿# Group_D_Gomoku
+
+## Organization
+
+University of Ottawa & University of Carleton
+
+
+
+## Authors:
+
+Bin Jia
+Tingyu Ye
+Hongzhi Zhang
+
+
+
+
 
 ## Organization
 
