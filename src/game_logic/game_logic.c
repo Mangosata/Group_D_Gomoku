@@ -1,6 +1,7 @@
 #include "../../include/game_logic/game_logic.h"
 
 extern int BOARD_ARRAY[ROW][COL];
+
 /*
  * Check if stone is overlay. If not, put it.
  * @Return: 1 is not overlay, 0 is overlay.
@@ -15,11 +16,11 @@ int put_stone_logic(float x, float y, int player) {
     col = (int) ((x - 100) / 25 + 0.5);
     row = (int) ((y - 100) / 25 + 0.5);
 
-    if (BOARD_ARRAY[row][col] == 0 && player == 0) {
+    if (BOARD_ARRAY[row][col] == 0 && player == 1) {
         BOARD_ARRAY[row][col] = 1;
         printf("player 1 %d\n", BOARD_ARRAY[row][col]);
         return 1;
-    } else if (BOARD_ARRAY[row][col] == 0 && player == 1) {
+    } else if (BOARD_ARRAY[row][col] == 0 && player == 2) {
         BOARD_ARRAY[row][col] = 2;
         printf("player 2 %d\n", BOARD_ARRAY[row][col]);
         return 2;
@@ -30,7 +31,6 @@ int put_stone_logic(float x, float y, int player) {
 }
 
 /*
- * Todo: check winner function
  * @Input: board_array[ROW][COl], player
  * @Return: 1 is win, 0 is no winner.
  */
@@ -43,13 +43,8 @@ int check_winner(int board_array[ROW][COL], int player, gpointer label) {
     int pattern_size = 5;
     int pattern[number_of_patterns][pattern_size][pattern_size];
 
-    printf("in check winner");
-    for (int i = 0; i < ROW; ++i) {
-        printf("\n");
-        for (int j = 0; j < COL; ++j) {
-            printf("%d", board_array[i][j]);
-        }
-    }
+    printf("in check winner\n");
+    printf("player is %d\n", player);
     /*
      * Pattern 1 -> Vertical (90 degrees)
      */
@@ -112,23 +107,15 @@ int check_winner(int board_array[ROW][COL], int player, gpointer label) {
         for (int j = 0; j < board_size; j++) {
             if (board_array[i][j] == 2) {
                 board[i][j] = -1;
-            }
-            else if(board_array[i][j] == 1){
+            } else if (board_array[i][j] == 1) {
                 board[i][j] = 1;
-            }
-            else{
+            } else {
                 board[i][j] = 0;
             }
 
         }
     }
 
-	for (int i = 0; i < board_size; i++) {
-        for (int j = 0; j < board_size; j++) {
-			printf("%d",board[i][j]);
-		}
-		printf("\n");
-	}
 
     int winner_array[board_size + pattern_size - 1][board_size + pattern_size - 1];
 
@@ -143,12 +130,6 @@ int check_winner(int board_array[ROW][COL], int player, gpointer label) {
         }
     }
 
-	for (int i = 0; i < board_size + pattern_size - 1; i++) {
-        for (int j = 0; j < board_size + pattern_size - 1; j++) {
-			printf("%d",winner_array[i][j]);
-		}
-		printf("\n");
-	}
 
     int check = 0;
     for (int p = 0; p < number_of_patterns; p++) {
@@ -161,12 +142,19 @@ int check_winner(int board_array[ROW][COL], int player, gpointer label) {
                 }
                 if (check == 5 || check == -5) {
                     char *winner_info;
-                    sprintf(&winner_info,
-                            " Winner is Player %d\n Click PvP to play again!", PLAYER + 1);
-                    gtk_label_set_label(label, &winner_info);
+                    if (player == 1) {
+                        sprintf(&winner_info,
+                                " Winner is Player 2\n Click PvP to play again!");
+                        gtk_label_set_label(label, &winner_info);
+                    } else if (player == 2) {
+                        sprintf(&winner_info,
+                                " Winner is Player 1\n Click PvP to play again!");
+                        gtk_label_set_label(label, &winner_info);
+                    }
+
                     return 1;
                 }
-		check = 0;
+                check = 0;
             }
         }
     }

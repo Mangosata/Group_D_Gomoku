@@ -24,8 +24,7 @@ void clear_surface(void) {
  * meanwhile, this button will be locked.
  */
 void button_start_player(GtkWidget *widget, GtkLabel *label) {
-//    start_label = gtk_label_new("Game Start!");
-    gtk_label_set_label(label, "Start Game!");
+    gtk_label_set_label(label, "Started Game!");
     if (START_PLAYER_GAME == 0) {
         START_PLAYER_GAME = 1;
     } else {

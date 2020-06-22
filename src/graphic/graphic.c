@@ -11,7 +11,7 @@ WINNER_FLAG = 0;
 extern int BOARD_ARRAY[ROW][COL];
 
 /* Initialize the player, at the beginning, it should be player 1 (black). */
-PLAYER = 0;
+PLAYER = 1;
 
 
 /* Create a new surface of the appropriate size to store our scribbles */
@@ -78,10 +78,10 @@ static void draw_stone(GtkWidget *widget,
     cairo_t *cr;
 
     /*
-     * When player = 0 means it is player 1's turn,
-     * When player = 1 means it is player 2's turn.
+     * When PLAYER = 1 means it is player 1's turn,
+     * When PLAYER = 2 means it is player 2's turn.
      */
-    if (PLAYER == 0) {
+    if (PLAYER == 1) {
         cr = cairo_create(SURFACE);
 
         cairo_set_source_rgb(cr, 0, 0, 0);
@@ -91,8 +91,8 @@ static void draw_stone(GtkWidget *widget,
 
         /* Now invalidate the affected region of the drawing area. */
         gtk_widget_queue_draw(widget);
-        PLAYER = 1;
-    } else {
+        PLAYER = 2;
+    } else if (PLAYER == 2) {
         cr = cairo_create(SURFACE);
 
         cairo_set_source_rgb(cr, 0, 0, 1);
@@ -101,7 +101,7 @@ static void draw_stone(GtkWidget *widget,
         cairo_destroy(cr);
 
         gtk_widget_queue_draw(widget);
-        PLAYER = 0;
+        PLAYER = 1;
     }
 }
 
@@ -180,7 +180,7 @@ static GtkWidget *create_button(GtkWidget *button_box) {
     GtkWidget *quit_button;
     GtkWidget *surrender;
     GtkWidget *pause;
-    GtkWidget *label = gtk_label_new("");
+    GtkWidget *label = gtk_label_new("Click PvP button to start!");
 
     gtk_box_pack_start(button_box, label, FALSE, FALSE, 0);
     player_button = gtk_button_new_with_label("Player vs Player");
