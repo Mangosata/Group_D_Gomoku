@@ -5,7 +5,7 @@
 #include <math.h>
 
 extern int start_player_game;
-extern int pause_game;
+extern pause_game;
 extern int player;
 
 /* Initialize the surface to white */

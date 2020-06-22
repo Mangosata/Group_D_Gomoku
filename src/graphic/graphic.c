@@ -5,7 +5,7 @@
 static cairo_surface_t *surface = NULL;
 
 start_player_game = 0;
-pause_game = 0;
+pause_game = FALSE;
 
 /* Initialize the player, at the beginning, it should be player 1 (black). */
 player = 0;
@@ -127,7 +127,7 @@ static gboolean button_press_event_cb(GtkWidget *widget,
     /* paranoia check, in case we haven't gotten a configure event */
     if (surface == NULL)
         return FALSE;
-    if (start_player_game == 1 && pause_game == 0) {
+    if (start_player_game == 1 && !pause_game) {
         if (event->x >= 90 && event->x <= 560 &&
             (fmod(event->x, 25) <= 10 || fmod(event->x, 25) >= 15)) {
             xflag = 1;
@@ -164,15 +164,15 @@ static void create_button(GtkWidget *button_box) {
     player_button = gtk_button_new_with_label("Player vs Player");
     surrender = gtk_button_new_with_label("Surrender");
     if(pause_game){
-    	pause = gtk_button_new_with_label("Resume");
+    	pause = gtk_button_set_label(GTK_BUTTON(pause),"Resume");
     }else{
-    	pause = gtk_button_new_with_label("Pause");
+    	pause = gtk_button_set_label(GTK_BUTTON(pause),"Pause");
     }
     //pause = gtk_button_new_with_label("Pause");
     quit_button = gtk_button_new_with_label("Quit");
     gtk_box_pack_start(button_box, player_button, FALSE, FALSE, 0);
     gtk_box_pack_start(button_box, surrender, FALSE, FALSE, 0);
-    gtk_box_pack_start(button_box, pause, FALSE, FALSE, 0);
+	gtk_box_pack_start(button_box, pause, FALSE, FALSE, 0);
     gtk_box_pack_start(button_box, quit_button, FALSE, FALSE, 0);
     g_signal_connect(player_button, "clicked", G_CALLBACK(button_start_player), NULL);
     g_signal_connect(surrender, "clicked", G_CALLBACK(button_surrender), NULL);
