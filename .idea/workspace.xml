@@ -36,10 +36,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="fixed bugs">
+    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="added surrender and pause">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/button_logic/button_logic.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/button_logic/button_logic.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/game_logic/game_logic.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/game_logic/game_logic.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/graphic/graphic.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/graphic/graphic.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/button_logic/button_logic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/button_logic/button_logic.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game_logic/game_logic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/game_logic/game_logic.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphic/graphic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphic/graphic.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592845578856</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added surrender and pause">
+      <created>1592848631832</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1592848631832</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +291,8 @@
     <MESSAGE value="delete some useless files" />
     <MESSAGE value="added create button function" />
     <MESSAGE value="added check winner logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="added check winner logic" />
+    <MESSAGE value="added surrender and pause" />
+    <option name="LAST_COMMIT_MESSAGE" value="added surrender and pause" />
   </component>
   <component name="WindowStateProjectService">
     <state x="842" y="382" width="625" height="471" key="#Notifications" timestamp="1592679776046">
@@ -308,22 +319,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="386" key="Github.CreatePullRequestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592787191029" />
-    <state width="1877" height="881" key="GridCell.Tab.0.bottom" timestamp="1592848449938">
+    <state width="1877" height="882" key="GridCell.Tab.0.bottom" timestamp="1592856913856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="881" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592848449938" />
-    <state width="1877" height="881" key="GridCell.Tab.0.center" timestamp="1592848449938">
+    <state width="1877" height="882" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592856913856" />
+    <state width="1877" height="882" key="GridCell.Tab.0.center" timestamp="1592856913856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="881" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592848449938" />
-    <state width="1877" height="881" key="GridCell.Tab.0.left" timestamp="1592848449938">
+    <state width="1877" height="882" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592856913856" />
+    <state width="1877" height="882" key="GridCell.Tab.0.left" timestamp="1592856913856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="881" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592848449938" />
-    <state width="1877" height="881" key="GridCell.Tab.0.right" timestamp="1592848449938">
+    <state width="1877" height="882" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592856913856" />
+    <state width="1877" height="882" key="GridCell.Tab.0.right" timestamp="1592856913856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="881" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592848449938" />
+    <state width="1877" height="882" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592856913856" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1592845176665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -364,10 +375,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592690424230" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592789728001">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592848633710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592789728001" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592848633710" />
     <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592679744199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

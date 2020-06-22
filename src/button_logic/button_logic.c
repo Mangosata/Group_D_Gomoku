@@ -9,13 +9,28 @@ void close_window(GtkWindow *window, cairo_surface_t *surface) {
     gtk_window_close(window);
 }
 
+/* @Description: Initialize the surface to white */
+void clear_surface(void) {
+    extern cairo_surface_t *SURFACE;
+    cairo_t *cr;
+    cr = cairo_create(SURFACE);
+    cairo_set_source_rgb(cr, 1, 1, 1);
+    cairo_paint(cr);
+    cairo_destroy(cr);
+}
 /*
  * @Description: When clicked, start the player vs player game,
  * player 1 (black) first,
  * meanwhile, this button will be locked.
  */
-void button_start_player(void) {
-    START_PLAYER_GAME = 1;
+void button_start_player(GtkWidget *widget, GtkLabel *label) {
+//    start_label = gtk_label_new("Game Start!");
+    gtk_label_set_label(label, "Start Game!");
+    if (START_PLAYER_GAME == 0) {
+        START_PLAYER_GAME = 1;
+    } else {
+        clear_surface();
+    }
 }
 
 /*
@@ -36,11 +51,13 @@ void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidg
 	gtk_container_add(GTK_CONTAINER(window),box);
 
 	frame1 = gtk_frame_new("");
-	if(!PLAYER){
+	if(PLAYER){
 		label1 = gtk_label_new("Player 2 surrendered! Player 1 is winner!");
+		WINNER_FLAG = 1;
 	}else{
 		label1 = gtk_label_new("Player 1 surrendered! Player 2 is winner!");
-	}
+        WINNER_FLAG = 1;
+    }
 
 	gtk_container_add(GTK_CONTAINER(frame1),label1);
 
@@ -49,7 +66,6 @@ void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidg
 
 	gtk_widget_show_all(window);
 	gtk_main();
-    ;
 }
 
 /*

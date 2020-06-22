@@ -33,7 +33,7 @@ int put_stone_logic(float x, float y, int player) {
  * @Input: board_array[ROW][COl], player
  * @Return: 1 is win, 0 is no winner.
  */
-int check_winner(int board_array[ROW][COL], int player) {
+int check_winner(int board_array[ROW][COL], int player, gpointer label) {
 
     /*
      * Generating Patterns to check the winner status
@@ -145,7 +145,10 @@ int check_winner(int board_array[ROW][COL], int player) {
                     }
                 }
                 if (check == 5 || check == -5) {
-                    printf("winner!");
+                    char *winner_info;
+                    sprintf(&winner_info,
+                            " Winner is Player %d\n Click PvP to play again!", PLAYER + 1);
+                    gtk_label_set_label(label, &winner_info);
                     return 1;
                 }
             }

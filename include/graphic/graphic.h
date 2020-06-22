@@ -11,9 +11,10 @@
 extern int START_PLAYER_GAME;
 extern int PLAYER;
 extern int PAUSE_GAME;
+extern int WINNER_FLAG;
 
 /* Initialize the surface to white */
-static void clear_surface(void);
+//static void clear_surface(void);
 
 /* Create a new surface of the appropriate size to store our stones */
 static gboolean configure_event_cb(GtkWidget *widget, GdkEventConfigure *event,
@@ -28,7 +29,7 @@ static void draw_stone(GtkWidget *widget, gdouble x, gdouble y);
 
 /* Handle button press events by clicking mouse */
 static gboolean button_press_event_cb(GtkWidget *widget, GdkEventButton *event,
-                                      gpointer data);
+                                      gpointer label);
 
 
 /* Generate the graphic window */

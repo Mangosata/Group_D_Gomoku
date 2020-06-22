@@ -14,7 +14,7 @@
 int put_stone_logic(float x, float y, int player);
 
 /* Check if there is a winner */
-int check_winner(int board_array[ROW][COL], int player);
+int check_winner(int board_array[ROW][COL], int player, gpointer label);
 
 int check_player_win(int player);
 
