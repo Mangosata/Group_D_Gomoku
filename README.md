@@ -1,6 +1,17 @@
 # Group_D_Gomoku
 
+## Organization
+
+University of Ottawa & University of Carleton
+
+## Authors:
+
+Bin Jia
+Tingyu Ye
+Hongzhi Zhao
+
 ## Project Statement
+
 Gomoku, also called Five in a Row, is an abstract strategy board game. It is traditionally played with Go pieces (black and white stones) on a Go board. It can be played using the 15×15 board or the 19×19 board. Players alternate turns to place a stone of their colour on an empty intersection. The winner is the first player to form an unbroken chain of five stones.
 
 ![Gomoku](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gomoku-game-3.svg/300px-Gomoku-game-3.svg.png)
@@ -18,10 +29,10 @@ Gomoku, also called Five in a Row, is an abstract strategy board game. It is tra
 
 2.Man-machine battle: The purpose of this mode's implementation is to have the player play with trained agent by implementing the reinforcement learning
 
+## Description
 
-## Requirements
-
-1. Implement the basic logic of Gomoku and finish man-man game mode in the console:
+1. The console version will 
+2. Implement the basic logic of Gomoku and finish man-man game mode in the console:
    - A two-dimension array with 19 rows and 19 columns representing the 19*19 board with the default value of 0.
    - Update any array element by inputting the value (E.g. 1 for black and 0 for white).
    - Once the array element is updated, restrict the array element to change for the whole game.
@@ -30,8 +41,7 @@ Gomoku, also called Five in a Row, is an abstract strategy board game. It is tra
    - If there are 5 stones in a row, end the game with the winner's name.
 
 
-2. Build a graphic window included board, stones and buttons using GTK +3.0.
-3. Apply the check winner logic in graphic version.
+2. Build a graphic window to play included board, stones and buttons using GTK +3.0.
 
 ## How to use
 
