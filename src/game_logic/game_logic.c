@@ -1,5 +1,4 @@
-#include "../../include/graphic_logic/logic.h"
-#include <stdio.h>
+#include "../../include/game_logic/game_logic.h"
 
 /* Use an array to store the board status */
 int board_array[ROW][COL] = {0};
