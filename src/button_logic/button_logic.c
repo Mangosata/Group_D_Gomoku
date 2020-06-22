@@ -37,18 +37,18 @@ void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidg
 
 	frame1 = gtk_frame_new("");
 	if(player){
-		label1 = gtk_label_new("player2 wins.");
-	}else{
 		label1 = gtk_label_new("player1 wins.");
+	}else{
+		label1 = gtk_label_new("player2 wins.");
 	}
-	
+
 	gtk_container_add(GTK_CONTAINER(frame1),label1);
 
 	gtk_label_set_justify(GTK_LABEL(label1),GTK_JUSTIFY_LEFT);
 	gtk_box_pack_start(GTK_BOX(box),frame1,FALSE,FALSE,5);
 
 	gtk_widget_show_all(window);
-	gtk_main();    
+	gtk_main();
     ;
 }
 
