@@ -5,7 +5,7 @@
 static cairo_surface_t *surface = NULL;
 
 /* Initialize the status of start, 0 means not start yet */
-start_player_game = 0;
+START_PLAYER_GAME = 0;
 
 /* Initialize the player, at the beginning, it should be player 1 (black). */
 int player = 0;
@@ -128,7 +128,7 @@ static gboolean button_press_event_cb(GtkWidget *widget,
     /* paranoia check, in case we haven't gotten a configure event */
     if (surface == NULL)
         return FALSE;
-    if (start_player_game == 1) {
+    if (START_PLAYER_GAME == 1) {
         if (event->x >= 90 && event->x <= 560 &&
             (fmod(event->x, 25) <= 10 || fmod(event->x, 25) >= 15)) {
             xflag = 1;

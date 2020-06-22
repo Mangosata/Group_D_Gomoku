@@ -1,7 +1,7 @@
 #include "../../include/game_logic/game_logic.h"
 
 /* Use an array to store the board status */
-int board_array[ROW][COL] = {0};
+int BOARD_ARRAY[ROW][COL] = {0};
 
 /*
  * Check if stone is overlay. If not, put it.
@@ -11,19 +11,18 @@ int board_array[ROW][COL] = {0};
  * If player 2 is playing, set the value to 2
  * If the mouse clicking is not in the board area, do nothing.
  */
-
 int put_stone_logic(float x, float y, int player) {
     int row, col;
     row = (int) ((x - 100) / 25 + 0.5);
     col = (int) ((y - 100) / 25 + 0.5);
 
-    if (board_array[row][col] == 0 && player == 0) {
-        board_array[row][col] = 1;
-        printf("player 1 %d\n", board_array[row][col]);
+    if (BOARD_ARRAY[row][col] == 0 && player == 0) {
+        BOARD_ARRAY[row][col] = 1;
+        printf("player 1 %d\n", BOARD_ARRAY[row][col]);
         return 1;
-    } else if (board_array[row][col] == 0 && player == 1) {
-        board_array[row][col] = 2;
-        printf("player 2 %d\n", board_array[row][col]);
+    } else if (BOARD_ARRAY[row][col] == 0 && player == 1) {
+        BOARD_ARRAY[row][col] = 2;
+        printf("player 2 %d\n", BOARD_ARRAY[row][col]);
         return 2;
     } else {
         printf("wrong\n");
@@ -33,7 +32,7 @@ int put_stone_logic(float x, float y, int player) {
 
 /*
  * Todo: check winner function
- * @Input: board_array[ROW][COl], player
+ * @Input: BOARD_ARRAY[ROW][COl], player
  * @Return: 1 is win, 0 is no winner.
  */
 int check_winner(int board_array[ROW][COL], int player) {

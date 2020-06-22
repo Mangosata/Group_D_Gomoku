@@ -5,7 +5,7 @@
 #include <math.h>
 
 /* Use a global lock to control start game status */
-extern int start_player_game;
+extern int START_PLAYER_GAME;
 
 /* Initialize the surface to white */
 static void clear_surface(void);

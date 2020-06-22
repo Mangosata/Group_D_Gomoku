@@ -15,7 +15,7 @@ void close_window(GtkWindow *window, cairo_surface_t *surface) {
  * meanwhile, this button will be locked.
  */
 void button_start_player(void) {
-    start_player_game = 1;
+    START_PLAYER_GAME = 1;
 }
 
 /*
