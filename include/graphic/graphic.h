@@ -4,6 +4,7 @@
 #include <gtk/gtk.h>
 #include <math.h>
 
+/* Use a global lock to control start game status */
 extern int start_player_game;
 
 /* Initialize the surface to white */

@@ -4,6 +4,7 @@
 
 static cairo_surface_t *surface = NULL;
 
+/* Initialize the status of start, 0 means not start yet */
 start_player_game = 0;
 
 /* Initialize the player, at the beginning, it should be player 1 (black). */
