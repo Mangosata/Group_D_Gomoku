@@ -22,8 +22,6 @@ static void draw_stone(GtkWidget *widget, gdouble x, gdouble y);
 static gboolean button_press_event_cb(GtkWidget *widget, GdkEventButton *event,
                                       gpointer data);
 
-/* Quit the window */
-static void close_window(void);
 
 /* Generate the graphic window */
 void activate(GtkApplication *app, gpointer user_data);

@@ -1,5 +1,6 @@
 #include "../../include/graphic/graphic.h"
-#include "../../include/graphic_logic/logic.h"
+#include "../../include/game_logic//game_logic.h"
+#include "../../include/button_logic/button_logic.h"
 
 static cairo_surface_t *surface = NULL;
 
@@ -146,13 +147,7 @@ static gboolean button_press_event_cb(GtkWidget *widget,
     return TRUE;
 }
 
-/* Quit the window */
-static void close_window(void) {
-    if (surface)
-        cairo_surface_destroy(surface);
 
-    gtk_main_quit();
-}
 
 void print_hello(){
     printf("hello");
@@ -172,10 +167,10 @@ static void create_button(GtkWidget *button_box) {
     gtk_box_pack_start(button_box, surrender, FALSE, FALSE, 0);
     gtk_box_pack_start(button_box, pause, FALSE, FALSE, 0);
     gtk_box_pack_start(button_box, quit_button, FALSE, FALSE, 0);
-    g_signal_connect(player_button, "clicked", G_CALLBACK(print_hello), NULL);
-    g_signal_connect(surrender, "clicked", G_CALLBACK(print_hello), NULL);
-    g_signal_connect(pause, "clicked", G_CALLBACK(print_hello), NULL);
-    g_signal_connect(quit_button, "clicked", G_CALLBACK(print_hello), NULL);
+    g_signal_connect(player_button, "clicked", G_CALLBACK(button_start_player), NULL);
+    g_signal_connect(surrender, "clicked", G_CALLBACK(button_surrender), NULL);
+    g_signal_connect(pause, "clicked", G_CALLBACK(button_pause), NULL);
+    g_signal_connect(quit_button, "clicked", G_CALLBACK(close_window), NULL);
 }
 
 /*
