@@ -1,4 +1,6 @@
 #include "../../include/graphic/graphic.h"
+#include "../../include/button_logic/button_logic.h"
+#include "../../include/game_logic/game_logic.h"
 
 static cairo_surface_t *surface = NULL;
 

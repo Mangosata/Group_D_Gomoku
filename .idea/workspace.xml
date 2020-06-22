@@ -38,7 +38,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="fixed bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game_logic/game_logic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/game_logic/game_logic.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphic/graphic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphic/graphic.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -215,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592789725353</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added check winner logic">
+      <created>1592845578856</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1592845578856</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +278,8 @@
     <MESSAGE value="added some comments" />
     <MESSAGE value="delete some useless files" />
     <MESSAGE value="added create button function" />
-    <option name="LAST_COMMIT_MESSAGE" value="added create button function" />
+    <MESSAGE value="added check winner logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="added check winner logic" />
   </component>
   <component name="WindowStateProjectService">
     <state x="842" y="382" width="625" height="471" key="#Notifications" timestamp="1592679776046">
@@ -331,14 +338,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592845176665" />
-    <state x="0" y="75" key="MergeDialog" timestamp="1592844189228">
+    <state x="0" y="75" key="MergeDialog" timestamp="1592845966190">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="75" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592844189228" />
-    <state x="389" y="218" width="914" height="575" key="MultipleFileMergeDialog" timestamp="1592844189239">
+    <state x="0" y="75" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592845966190" />
+    <state x="389" y="218" width="914" height="575" key="MultipleFileMergeDialog" timestamp="1592845968572">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="389" y="218" width="914" height="575" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592844189239" />
+    <state x="389" y="218" width="914" height="575" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592845968572" />
     <state x="822" y="240" key="RollbackChangesDialog" timestamp="1592690147248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -371,10 +378,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="744" y="307" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589923745604" />
-    <state x="634" y="307" key="git4idea.merge.GitPullDialog" timestamp="1592844117055">
+    <state x="634" y="307" key="git4idea.merge.GitPullDialog" timestamp="1592845647636">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="634" y="307" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592844117055" />
+    <state x="634" y="307" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592845647636" />
     <state x="769" y="414" key="git4idea.ui.GitResetDialog" timestamp="1589923765201">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
