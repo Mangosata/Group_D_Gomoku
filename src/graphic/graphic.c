@@ -6,11 +6,12 @@ static cairo_surface_t *surface = NULL;
 
 /* Initialize the status of start, 0 means not start yet */
 START_PLAYER_GAME = 0;
+PAUSE_GAME = FALSE;
 extern int BOARD_ARRAY[ROW][COL];
 int winner_flag = 0;
 
 /* Initialize the player, at the beginning, it should be player 1 (black). */
-int player = 0;
+PLAYER = 0;
 
 /* @Description: Initialize the surface to white */
 static void clear_surface(void) {
@@ -88,7 +89,7 @@ static void draw_stone(GtkWidget *widget,
      * When player = 0 means it is player 1's turn,
      * When player = 1 means it is player 2's turn.
      */
-    if (player == 0) {
+    if (PLAYER == 0) {
         cr = cairo_create(surface);
 
         cairo_set_source_rgb(cr, 0, 0, 0);
@@ -98,7 +99,7 @@ static void draw_stone(GtkWidget *widget,
 
         /* Now invalidate the affected region of the drawing area. */
         gtk_widget_queue_draw(widget);
-        player = 1;
+        PLAYER = 1;
     } else {
         cr = cairo_create(surface);
 
@@ -108,7 +109,7 @@ static void draw_stone(GtkWidget *widget,
         cairo_destroy(cr);
 
         gtk_widget_queue_draw(widget);
-        player = 0;
+        PLAYER = 0;
     }
 }
 
@@ -137,7 +138,7 @@ static gboolean button_press_event_cb(GtkWidget *widget,
     if (winner_flag == 1) {
         START_PLAYER_GAME = 0;
         winner_flag = 0;
-        player = 0;
+        PLAYER = 0;
         memset(BOARD_ARRAY, 0, sizeof(BOARD_ARRAY));
         clear_surface();
         printf("reset:\n");
@@ -149,7 +150,7 @@ static gboolean button_press_event_cb(GtkWidget *widget,
         }
     }
 
-    if (START_PLAYER_GAME == 1 && winner_flag == 0) {
+    if (START_PLAYER_GAME == 1 && winner_flag == 0 && !PAUSE_GAME) {
         if (event->x >= 90 && event->x <= 560 &&
             (fmod(event->x, 25) <= 10 || fmod(event->x, 25) >= 15)) {
             xflag = 1;
@@ -161,7 +162,7 @@ static gboolean button_press_event_cb(GtkWidget *widget,
 
         if (event->button == GDK_BUTTON_PRIMARY && xflag == 1 && yflag == 1) {
             /* Check if the stone is overlay */
-            if (put_stone_logic(event->x, event->y, player) != 0) {
+            if (put_stone_logic(event->x, event->y, PLAYER) != 0) {
                 int row = event->x, col = event->y;
                 draw_stone(widget, (int) (event->x / 25 + 0.5) * 25,
                            (int) (event->y / 25 + 0.5) * 25);
@@ -172,8 +173,8 @@ static gboolean button_press_event_cb(GtkWidget *widget,
                     }
                 }
                 printf("\n");
-                printf("%d\n", check_winner(BOARD_ARRAY, player));
-                winner_flag = check_winner(BOARD_ARRAY, player);
+                printf("%d\n", check_winner(BOARD_ARRAY, PLAYER));
+                winner_flag = check_winner(BOARD_ARRAY, PLAYER);
             }
         }
     }

@@ -9,6 +9,8 @@
 
 /* Use a global lock to control start game status */
 extern int START_PLAYER_GAME;
+extern int PLAYER;
+extern int PAUSE_GAME;
 
 /* Initialize the surface to white */
 static void clear_surface(void);
