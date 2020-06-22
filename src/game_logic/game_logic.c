@@ -166,8 +166,8 @@ int check_winner(int board_array[ROW][COL], int player, gpointer label) {
                     gtk_label_set_label(label, &winner_info);
                     return 1;
                 }
+		check = 0;
             }
-            check = 0;
         }
     }
     return 0;
