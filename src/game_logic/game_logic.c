@@ -30,6 +30,7 @@ int put_stone_logic(float x, float y, int player) {
 }
 
 /*
+ * Todo: check winner function
  * @Input: board_array[ROW][COl], player
  * @Return: 1 is win, 0 is no winner.
  */
@@ -89,7 +90,7 @@ int check_winner(int board_array[ROW][COL], int player) {
     }
 
     /*
-     * Pattern 4 -> Diagonal (145 degrees)
+     * Pattern 4 -> Diagonal (45 degrees)
      */
     for (int i = 0; i < pattern_size; i++) {
         for (int j = 0; j < pattern_size; j++) {
@@ -121,6 +122,13 @@ int check_winner(int board_array[ROW][COL], int player) {
 
         }
     }
+	
+	for (int i = 0; i < board_size; i++) {
+        for (int j = 0; j < board_size; j++) {
+			printf("%d",board[i][j]);
+		}
+		printf("\n");
+	}
 
     int winner_array[board_size + pattern_size - 1][board_size + pattern_size - 1];
 
@@ -134,6 +142,13 @@ int check_winner(int board_array[ROW][COL], int player) {
             winner_array[i][j] = board[i][j];
         }
     }
+	
+	for (int i = 0; i < board_size + pattern_size - 1; i++) {
+        for (int j = 0; j < board_size + pattern_size - 1; j++) {
+			printf("%d",winner_array[i][j]);
+		}
+		printf("\n");
+	}
 
     int check = 0;
     for (int p = 0; p < number_of_patterns; p++) {
