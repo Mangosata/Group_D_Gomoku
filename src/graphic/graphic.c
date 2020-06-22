@@ -1,14 +1,17 @@
 #include "../../include/graphic/graphic.h"
-#include "../../include/game_logic//game_logic.h"
 #include "../../include/button_logic/button_logic.h"
+#include "../../include/game_logic/game_logic.h"
 
 static cairo_surface_t *surface = NULL;
 
-start_player_game = 0;
-pause_game = FALSE;
+/* Initialize the status of start, 0 means not start yet */
+START_PLAYER_GAME = 0;
+PAUSE_GAME = FALSE;
+extern int BOARD_ARRAY[ROW][COL];
+int winner_flag = 0;
 
 /* Initialize the player, at the beginning, it should be player 1 (black). */
-player = 0;
+PLAYER = 0;
 
 /* @Description: Initialize the surface to white */
 static void clear_surface(void) {
@@ -19,9 +22,7 @@ static void clear_surface(void) {
     cairo_destroy(cr);
 }
 
-/*
- * @Description: Create a new surface of the appropriate size to store our stones
- */
+/* Create a new surface of the appropriate size to store our scribbles */
 static gboolean configure_event_cb(GtkWidget *widget,
                                    GdkEventConfigure *event,
                                    gpointer data) {
@@ -35,6 +36,7 @@ static gboolean configure_event_cb(GtkWidget *widget,
     /* Initialize the surface to white */
     clear_surface();
 
+    /* We've handled the configure event, no need for further processing. */
     return TRUE;
 }
 
@@ -87,7 +89,7 @@ static void draw_stone(GtkWidget *widget,
      * When player = 0 means it is player 1's turn,
      * When player = 1 means it is player 2's turn.
      */
-    if (player == 0) {
+    if (PLAYER == 0) {
         cr = cairo_create(surface);
 
         cairo_set_source_rgb(cr, 0, 0, 0);
@@ -95,8 +97,9 @@ static void draw_stone(GtkWidget *widget,
         cairo_fill(cr);
         cairo_destroy(cr);
 
+        /* Now invalidate the affected region of the drawing area. */
         gtk_widget_queue_draw(widget);
-        player = 1;
+        PLAYER = 1;
     } else {
         cr = cairo_create(surface);
 
@@ -106,7 +109,7 @@ static void draw_stone(GtkWidget *widget,
         cairo_destroy(cr);
 
         gtk_widget_queue_draw(widget);
-        player = 0;
+        PLAYER = 0;
     }
 }
 
@@ -127,7 +130,27 @@ static gboolean button_press_event_cb(GtkWidget *widget,
     /* paranoia check, in case we haven't gotten a configure event */
     if (surface == NULL)
         return FALSE;
-    if (start_player_game == 1 && !pause_game) {
+
+    /*
+     * If there is a winner, game over and output winner info,
+     * meanwhile, reset the BOARD_ARRAY and winner_flag.
+     */
+    if (winner_flag == 1) {
+        START_PLAYER_GAME = 0;
+        winner_flag = 0;
+        PLAYER = 0;
+        memset(BOARD_ARRAY, 0, sizeof(BOARD_ARRAY));
+        clear_surface();
+        printf("reset:\n");
+        for (int i = 0; i < ROW; ++i) {
+            printf("\n");
+            for (int j = 0; j < COL; ++j) {
+                printf("%d", BOARD_ARRAY[i][j]);
+            }
+        }
+    }
+
+    if (START_PLAYER_GAME == 1 && winner_flag == 0 && !PAUSE_GAME) {
         if (event->x >= 90 && event->x <= 560 &&
             (fmod(event->x, 25) <= 10 || fmod(event->x, 25) >= 15)) {
             xflag = 1;
@@ -139,21 +162,26 @@ static gboolean button_press_event_cb(GtkWidget *widget,
 
         if (event->button == GDK_BUTTON_PRIMARY && xflag == 1 && yflag == 1) {
             /* Check if the stone is overlay */
-            if (put_stone_logic(event->x, event->y, player) != 0) {
+            if (put_stone_logic(event->x, event->y, PLAYER) != 0) {
+                int row = event->x, col = event->y;
                 draw_stone(widget, (int) (event->x / 25 + 0.5) * 25,
                            (int) (event->y / 25 + 0.5) * 25);
+                for (int i = 0; i < ROW; ++i) {
+                    printf("\n");
+                    for (int j = 0; j < COL; ++j) {
+                        printf("%d", BOARD_ARRAY[i][j]);
+                    }
+                }
+                printf("\n");
+                printf("%d\n", check_winner(BOARD_ARRAY, PLAYER));
+                winner_flag = check_winner(BOARD_ARRAY, PLAYER);
             }
         }
     }
 
-
     return TRUE;
 }
 
-
-void print_hello(){
-    printf("hello");
-}
 
 static void create_button(GtkWidget *button_box) {
     GtkWidget *player_button;
@@ -163,16 +191,11 @@ static void create_button(GtkWidget *button_box) {
 
     player_button = gtk_button_new_with_label("Player vs Player");
     surrender = gtk_button_new_with_label("Surrender");
-    if(pause_game){
-    	pause = gtk_button_new_with_label("Resume");
-    }else{
-    	pause = gtk_button_new_with_label("Pause");
-    }
-    //pause = gtk_button_new_with_label("Pause");
+    pause = gtk_button_new_with_label("Pause");
     quit_button = gtk_button_new_with_label("Quit");
     gtk_box_pack_start(button_box, player_button, FALSE, FALSE, 0);
     gtk_box_pack_start(button_box, surrender, FALSE, FALSE, 0);
-	gtk_box_pack_start(button_box, pause, FALSE, FALSE, 0);
+    gtk_box_pack_start(button_box, pause, FALSE, FALSE, 0);
     gtk_box_pack_start(button_box, quit_button, FALSE, FALSE, 0);
     g_signal_connect(player_button, "clicked", G_CALLBACK(button_start_player), NULL);
     g_signal_connect(surrender, "clicked", G_CALLBACK(button_surrender), NULL);

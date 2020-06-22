@@ -15,7 +15,7 @@ void close_window(GtkWindow *window, cairo_surface_t *surface) {
  * meanwhile, this button will be locked.
  */
 void button_start_player(void) {
-    start_player_game = 1;
+    START_PLAYER_GAME = 1;
 }
 
 /*
@@ -23,7 +23,7 @@ void button_start_player(void) {
  * then display another player is winner message.
  */
 void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidget *frame1,int argc, char*argv[]) {
-	pause_game = TRUE;
+    PAUSE_GAME = TRUE;
 	gtk_init(&argc,&argv);
 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 	g_signal_connect(G_OBJECT(window),"delete_event",G_CALLBACK(gtk_main_quit),NULL);
@@ -36,10 +36,10 @@ void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidg
 	gtk_container_add(GTK_CONTAINER(window),box);
 
 	frame1 = gtk_frame_new("");
-	if(player){
-		label1 = gtk_label_new("player1 wins.");
+	if(PLAYER){
+		label1 = gtk_label_new("Player 2 surrendered! Player 1 is winner!");
 	}else{
-		label1 = gtk_label_new("player2 wins.");
+		label1 = gtk_label_new("Player 1 surrendered! Player 2 is winner!");
 	}
 
 	gtk_container_add(GTK_CONTAINER(frame1),label1);
@@ -57,6 +57,11 @@ void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidg
  * no player can put the stone,
  * and the pause button will change to resume button.
  */
-void button_pause(void) {
-    pause_game = !pause_game;
+void button_pause(GtkWidget *pause) {
+    PAUSE_GAME = !PAUSE_GAME;
+    if(PAUSE_GAME){
+    	gtk_button_set_label(GTK_BUTTON(pause),"Resume");
+    }else{
+    	gtk_button_set_label(GTK_BUTTON(pause),"Pause");
+    }
 }

@@ -1,6 +1,7 @@
 #include <gtk/gtk.h>
-#include <math.h>
 #include "../include/graphic/graphic.h"
+
+int BOARD_ARRAY[ROW][COL] = {{0,},};
 
 
 int main(int argc, char **argv) {

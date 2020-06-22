@@ -13,6 +13,6 @@ void button_start_player();
 void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidget *frame1,int argc, char*argv[]);
 
 /* Pause the game */
-void button_pause();
+void button_pause(GtkWidget *pause);
 
 #endif //GROUP_D_GOMOKU_BUTTON_LOGIC_H
