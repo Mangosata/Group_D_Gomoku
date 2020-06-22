@@ -4,8 +4,12 @@
 #include <gtk/gtk.h>
 #include <math.h>
 
+#define ROW 19
+#define COL 19
+
 /* Use a global lock to control start game status */
 extern int START_PLAYER_GAME;
+
 
 /* Initialize the surface to white */
 static void clear_surface(void);

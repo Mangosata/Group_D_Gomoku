@@ -6,11 +6,10 @@ static cairo_surface_t *surface = NULL;
 
 /* Initialize the status of start, 0 means not start yet */
 START_PLAYER_GAME = 0;
+extern int BOARD_ARRAY[ROW][COL];
 
 /* Initialize the player, at the beginning, it should be player 1 (black). */
 int player = 0;
-
-int winnerflag = 0;
 
 /* @Description: Initialize the surface to white */
 static void clear_surface(void) {
@@ -129,7 +128,7 @@ static gboolean button_press_event_cb(GtkWidget *widget,
     /* paranoia check, in case we haven't gotten a configure event */
     if (surface == NULL)
         return FALSE;
-    if (START_PLAYER_GAME == 1 && winnerflag == 0) {
+    if (START_PLAYER_GAME == 1) {
         if (event->x >= 90 && event->x <= 560 &&
             (fmod(event->x, 25) <= 10 || fmod(event->x, 25) >= 15)) {
             xflag = 1;
@@ -145,13 +144,17 @@ static gboolean button_press_event_cb(GtkWidget *widget,
                 int row = event->x, col = event->y;
                 draw_stone(widget, (int) (event->x / 25 + 0.5) * 25,
                            (int) (event->y / 25 + 0.5) * 25);
-                printf("finish draw\n");
-                printf(BOARD_ARRAY[row][col]);
-//                winnerflag = check_winner(BOARD_ARRAY[ROW][COL], player);
+                for (int i = 0; i < ROW; ++i) {
+                    printf("\n");
+                    for (int j = 0; j < COL; ++j) {
+                        printf("%d", BOARD_ARRAY[i][j]);
+                    }
+                }
+                printf("\n");
+                printf("%d\n", check_winner(BOARD_ARRAY, player));
             }
         }
     }
-
 
     return TRUE;
 }

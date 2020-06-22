@@ -1,7 +1,6 @@
 #include "../../include/game_logic/game_logic.h"
 
-BOARD_ARRAY[ROW][COL] = {0};
-
+extern int BOARD_ARRAY[ROW][COL];
 /*
  * Check if stone is overlay. If not, put it.
  * @Return: 1 is not overlay, 0 is overlay.
@@ -13,8 +12,8 @@ BOARD_ARRAY[ROW][COL] = {0};
 
 int put_stone_logic(float x, float y, int player) {
     int row, col;
-    row = (int) ((x - 100) / 25 + 0.5);
-    col = (int) ((y - 100) / 25 + 0.5);
+    col = (int) ((x - 100) / 25 + 0.5);
+    row = (int) ((y - 100) / 25 + 0.5);
 
     if (BOARD_ARRAY[row][col] == 0 && player == 0) {
         BOARD_ARRAY[row][col] = 1;
@@ -30,6 +29,7 @@ int put_stone_logic(float x, float y, int player) {
     }
 }
 
+
 /*
  * Todo: check winner function
  * @Input: board_array[ROW][COl], player
@@ -44,6 +44,13 @@ int check_winner(int board_array[ROW][COL], int player) {
     int pattern_size = 5;
     int pattern[number_of_patterns][pattern_size][pattern_size];
 
+    printf("in check winner");
+    for (int i = 0; i < ROW; ++i) {
+        printf("\n");
+        for (int j = 0; j < COL; ++j) {
+            printf("%d", board_array[i][j]);
+        }
+    }
     /*
      * Pattern 1 -> Vertical (90 degrees)
      */
@@ -104,9 +111,9 @@ int check_winner(int board_array[ROW][COL], int player) {
     int board[board_size][board_size];
     for (int i = 0; i < board_size; i++) {
         for (int j = 0; j < board_size; j++) {
-			if (board_array[i][j] == 2){
-            board[i][j] = -1;
-			}
+            if (board_array[i][j] == 2) {
+                board[i][j] = -1;
+            }
         }
     }
 
@@ -133,6 +140,7 @@ int check_winner(int board_array[ROW][COL], int player) {
                     }
                 }
                 if (check == 5 || check == -5) {
+                    printf("winner!");
                     return 1;
                 }
             }
