@@ -164,9 +164,9 @@ static void create_button(GtkWidget *button_box) {
     player_button = gtk_button_new_with_label("Player vs Player");
     surrender = gtk_button_new_with_label("Surrender");
     if(pause_game){
-    	pause = gtk_button_set_label(GTK_BUTTON(pause),"Resume");
+    	pause = gtk_button_new_with_label("Resume");
     }else{
-    	pause = gtk_button_set_label(GTK_BUTTON(pause),"Pause");
+    	pause = gtk_button_new_with_label("Pause");
     }
     //pause = gtk_button_new_with_label("Pause");
     quit_button = gtk_button_new_with_label("Quit");

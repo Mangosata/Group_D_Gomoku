@@ -23,7 +23,7 @@ void button_start_player(void) {
  * then display another player is winner message.
  */
 void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidget *frame1,int argc, char*argv[]) {
-	pause_game = 1;
+	pause_game = TRUE;
 	gtk_init(&argc,&argv);
 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 	g_signal_connect(G_OBJECT(window),"delete_event",G_CALLBACK(gtk_main_quit),NULL);
