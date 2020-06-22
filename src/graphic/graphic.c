@@ -1,6 +1,4 @@
 #include "../../include/graphic/graphic.h"
-#include "../../include/game_logic//game_logic.h"
-#include "../../include/button_logic/button_logic.h"
 
 static cairo_surface_t *surface = NULL;
 
@@ -21,9 +19,7 @@ static void clear_surface(void) {
     cairo_destroy(cr);
 }
 
-/*
- * @Description: Create a new surface of the appropriate size to store our stones
- */
+/* Create a new surface of the appropriate size to store our scribbles */
 static gboolean configure_event_cb(GtkWidget *widget,
                                    GdkEventConfigure *event,
                                    gpointer data) {
@@ -37,6 +33,7 @@ static gboolean configure_event_cb(GtkWidget *widget,
     /* Initialize the surface to white */
     clear_surface();
 
+    /* We've handled the configure event, no need for further processing. */
     return TRUE;
 }
 
@@ -97,6 +94,7 @@ static void draw_stone(GtkWidget *widget,
         cairo_fill(cr);
         cairo_destroy(cr);
 
+        /* Now invalidate the affected region of the drawing area. */
         gtk_widget_queue_draw(widget);
         player = 1;
     } else {

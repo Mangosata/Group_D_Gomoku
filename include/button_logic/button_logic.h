@@ -10,7 +10,7 @@ void close_window(GtkWindow *window, cairo_surface_t *surface);
 void button_start_player();
 
 /* The current player surrender*/
-void button_surrender();
+void button_surrender(GtkWidget *window,GtkWidget *box,GtkWidget *label1,GtkWidget *frame1,int argc, char*argv[]);
 
 /* Pause the game */
 void button_pause();
