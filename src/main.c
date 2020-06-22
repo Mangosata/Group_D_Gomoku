@@ -27,7 +27,7 @@ int main(void) {
     /*
      * Randomly deciding which player will go first
      */
-    int p = rand() % 2 + 1;
+    int p = 1;
 
     /*
      * this function will keep on running until a winner is found
