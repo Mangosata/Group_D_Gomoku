@@ -10,6 +10,7 @@ BOARD_ARRAY[ROW][COL] = {0};
  * If player 2 is playing, set the value to 2
  * If the mouse clicking is not in the board area, do nothing.
  */
+
 int put_stone_logic(float x, float y, int player) {
     int row, col;
     row = (int) ((x - 100) / 25 + 0.5);
@@ -31,7 +32,7 @@ int put_stone_logic(float x, float y, int player) {
 
 /*
  * Todo: check winner function
- * @Input: BOARD_ARRAY[ROW][COl], player
+ * @Input: board_array[ROW][COl], player
  * @Return: 1 is win, 0 is no winner.
  */
 int check_winner(int board_array[ROW][COL], int player) {
@@ -99,13 +100,13 @@ int check_winner(int board_array[ROW][COL], int player) {
      * Creating an array named "winner_array" to store all the elements of board and extend it by PATTERN_SIZE - 1
      * to implement the pattern multiplication to get the winner status
      */
-    int board_size = COL;
+    int board_size = 19;
     int board[board_size][board_size];
     for (int i = 0; i < board_size; i++) {
         for (int j = 0; j < board_size; j++) {
-            if (board_array[i][j] == 2) {
-                board[i][j] = -1;
-            }
+			if (board_array[i][j] == 2){
+            board[i][j] = -1;
+			}
         }
     }
 
@@ -132,14 +133,12 @@ int check_winner(int board_array[ROW][COL], int player) {
                     }
                 }
                 if (check == 5 || check == -5) {
-                    printf("\n!! PLAYER %d is the WINNER!!", player);
                     return 1;
-
                 }
             }
             check = 0;
         }
     }
     return 0;
-}
 
+}
