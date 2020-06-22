@@ -85,7 +85,7 @@ int check_winner(int board_array[ROW][COL], int player) {
     }
 
     /*
-     * Pattern 4 -> Diagonal (145 degrees)
+     * Pattern 4 -> Diagonal (45 degrees)
      */
     for (int i = 0; i < pattern_size; i++) {
         for (int j = 0; j < pattern_size; j++) {
@@ -107,8 +107,12 @@ int check_winner(int board_array[ROW][COL], int player) {
         for (int j = 0; j < board_size; j++) {
             if (board_array[i][j] == 2) {
                 board[i][j] = -1;
-            } else {
-                board[i][j] = board_array[i][j];
+            } 
+            else if(board_array[i][j] == 1){
+                board[i][j] = 1;
+            } 
+            else{
+                board[i][j] = 0;
             }
 
         }
