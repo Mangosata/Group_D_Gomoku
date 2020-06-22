@@ -37,15 +37,15 @@ int put_stone_logic(float x, float y, int player) {
  * @Return: 1 is win, 0 is no winner.
  */
 int check_winner(int board_array[ROW][COL], int player) {
-	
-	/*
-	 * Generating Patterns to check the winner status
-	 */
-	int number_of_patterns = 4;
-	int pattern_size = 5;
-	int pattern [number_of_patterns][pattern_size][pattern_size];
-	
-	/*
+
+    /*
+     * Generating Patterns to check the winner status
+     */
+    int number_of_patterns = 4;
+    int pattern_size = 5;
+    int pattern[number_of_patterns][pattern_size][pattern_size];
+
+    /*
      * Pattern 1 -> Vertical (90 degrees)
      */
     for (int i = 0; i < pattern_size; i++) {
@@ -96,7 +96,7 @@ int check_winner(int board_array[ROW][COL], int player) {
             }
         }
     }
-	
+
     /*
      * Creating an array named "winner_array" to store all the elements of board and extend it by PATTERN_SIZE - 1
      * to implement the pattern multiplication to get the winner status
@@ -105,16 +105,15 @@ int check_winner(int board_array[ROW][COL], int player) {
     int board[board_size][board_size];
     for (int i = 0; i < board_size; i++) {
         for (int j = 0; j < board_size; j++) {
-	    if (board_array[i][j] == 2){
-        	board[i][j] = -1;
-	    }
-	    else{
-		board[i][j] = board_array[i][j];
-	    }   
-		    
+            if (board_array[i][j] == 2) {
+                board[i][j] = -1;
+            } else {
+                board[i][j] = board_array[i][j];
+            }
+
         }
     }
-	
+
     int winner_array[board_size + pattern_size - 1][board_size + pattern_size - 1];
 
     /*
@@ -129,7 +128,7 @@ int check_winner(int board_array[ROW][COL], int player) {
     }
 
     int check = 0;
-    for (int p = 0; p < NUMBER_OF_PATTERNS; p++) {
+    for (int p = 0; p < number_of_patterns; p++) {
         for (int wi = 0; wi < board_size; wi++) {
             for (int wj = 0; wj < board_size; wj++) {
                 for (int pi = 0; pi < pattern_size; pi++) {
@@ -138,12 +137,12 @@ int check_winner(int board_array[ROW][COL], int player) {
                     }
                 }
                 if (check == 5 || check == -5) {
-			return 1;
-		    }
+                    return 1;
                 }
-                check = 0;
             }
+            check = 0;
         }
     }
     return 0;
+
 }
