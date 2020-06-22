@@ -144,7 +144,6 @@ Open the terminal first and then use this command line:
 ```bash
 sudo apt-get install build-essential
 ```
-****
 After you install gcc and gtk3.0 you can run the programe.
 Firstly, you need to copy graphic.c, game_logic.c and button_logic then paste to the folder src.
 
