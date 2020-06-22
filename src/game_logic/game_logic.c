@@ -29,7 +29,6 @@ int put_stone_logic(float x, float y, int player) {
     }
 }
 
-
 /*
  * Todo: check winner function
  * @Input: board_array[ROW][COl], player
@@ -114,6 +113,13 @@ int check_winner(int board_array[ROW][COL], int player) {
             if (board_array[i][j] == 2) {
                 board[i][j] = -1;
             }
+            else if(board_array[i][j] == 1){
+                board[i][j] = 1;
+            }
+            else{
+                board[i][j] = 0;
+            }
+
         }
     }
 
@@ -134,9 +140,9 @@ int check_winner(int board_array[ROW][COL], int player) {
     for (int p = 0; p < number_of_patterns; p++) {
         for (int wi = 0; wi < board_size; wi++) {
             for (int wj = 0; wj < board_size; wj++) {
-                for (int pi = 0; pi < pattern_size; pi++) {
-                    for (int pj = 0; pj < pattern_size; pj++) {
-                        check += winner_array[wi + pi][wj + pj] * pattern[p][pi][pj];
+                for (int pa = 0; pa < pattern_size; pa++) {
+                    for (int pb = 0; pb < pattern_size; pb++) {
+                        check += winner_array[wi + pa][wj + pb] * pattern[p][pa][pb];
                     }
                 }
                 if (check == 5 || check == -5) {
