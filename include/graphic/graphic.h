@@ -4,6 +4,8 @@
 #include <gtk/gtk.h>
 #include <math.h>
 
+extern int start_player_game;
+
 /* Initialize the surface to white */
 static void clear_surface(void);
 

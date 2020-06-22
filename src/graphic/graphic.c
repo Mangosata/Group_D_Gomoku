@@ -4,8 +4,11 @@
 
 static cairo_surface_t *surface = NULL;
 
+start_player_game = 0;
+
 /* Initialize the player, at the beginning, it should be player 1 (black). */
 int player = 0;
+
 
 /* @Description: Initialize the surface to white */
 static void clear_surface(void) {
@@ -112,6 +115,9 @@ static void draw_stone(GtkWidget *widget,
  * depending which player is playing now.
  * The button-press signal handler receives
  * a GdkEventButton struct which contains this information.
+ * If mouse clicks near the intersection,
+ * and only when xflag and yflag both satisfy the requirements,
+ * put the stone on the board.
  */
 static gboolean button_press_event_cb(GtkWidget *widget,
                                       GdkEventButton *event,
@@ -121,37 +127,29 @@ static gboolean button_press_event_cb(GtkWidget *widget,
     /* paranoia check, in case we haven't gotten a configure event */
     if (surface == NULL)
         return FALSE;
+    if (start_player_game == 1) {
+        if (event->x >= 90 && event->x <= 560 &&
+            (fmod(event->x, 25) <= 10 || fmod(event->x, 25) >= 15)) {
+            xflag = 1;
+        }
+        if (event->y >= 90 && event->y <= 560 &&
+            (fmod(event->y, 25) <= 10 || fmod(event->y, 25) >= 15)) {
+            yflag = 1;
+        }
 
-    /*
-     * @Description: If mouse clicks near the intersection,
-     * and only when xflag and yflag both satisfy the requirements,
-     * put the stone on the board.
-     */
-    if (event->x >= 90 && event->x <= 560 &&
-        (fmod(event->x, 25) <= 10 || fmod(event->x, 25) >= 15)) {
-        xflag = 1;
-    }
-    if (event->y >= 90 && event->y <= 560 &&
-        (fmod(event->y, 25) <= 10 || fmod(event->y, 25) >= 15)) {
-        yflag = 1;
-    }
-
-    if (event->button == GDK_BUTTON_PRIMARY && xflag == 1 && yflag == 1) {
-        /* Check if the stone is overlay */
-        if (put_stone_logic(event->x, event->y, player) != 0) {
-            draw_stone(widget, (int) (event->x / 25 + 0.5) * 25,
-                       (int) (event->y / 25 + 0.5) * 25);
+        if (event->button == GDK_BUTTON_PRIMARY && xflag == 1 && yflag == 1) {
+            /* Check if the stone is overlay */
+            if (put_stone_logic(event->x, event->y, player) != 0) {
+                draw_stone(widget, (int) (event->x / 25 + 0.5) * 25,
+                           (int) (event->y / 25 + 0.5) * 25);
+            }
         }
     }
+
 
     return TRUE;
 }
 
-
-
-void print_hello(){
-    printf("hello");
-}
 
 static void create_button(GtkWidget *button_box) {
     GtkWidget *player_button;
