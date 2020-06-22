@@ -197,8 +197,16 @@ int check_winner(int board_size, char board[][board_size], int player_name) {
                     }
                 }
                 if (check == 5 || check == -5) {
-                    printf("\n!! Player %d is the winner!!\n", player_name);
-                    exit(0);
+                    char k = 'a';
+					printf("\n!! PLAYER %d is the WINNER!!\nPress 'z' and Enter..\n",player_name);
+					PRESS_ENTER: scanf("%c",&k);
+					if (k == 'z'){
+						exit(0);
+					}
+					else{
+						printf("Please Press 'z' and Enter..\n");
+						goto PRESS_ENTER;
+					}
                 }
                 check = 0;
             }
