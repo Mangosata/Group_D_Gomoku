@@ -154,6 +154,30 @@ static void close_window(void) {
     gtk_main_quit();
 }
 
+void print_hello(){
+    printf("hello");
+}
+
+static void create_button(GtkWidget *button_box) {
+    GtkWidget *player_button;
+    GtkWidget *quit_button;
+    GtkWidget *surrender;
+    GtkWidget *pause;
+
+    player_button = gtk_button_new_with_label("Player vs Player");
+    surrender = gtk_button_new_with_label("Surrender");
+    pause = gtk_button_new_with_label("Pause");
+    quit_button = gtk_button_new_with_label("Quit");
+    gtk_box_pack_start(button_box, player_button, FALSE, FALSE, 0);
+    gtk_box_pack_start(button_box, surrender, FALSE, FALSE, 0);
+    gtk_box_pack_start(button_box, pause, FALSE, FALSE, 0);
+    gtk_box_pack_start(button_box, quit_button, FALSE, FALSE, 0);
+    g_signal_connect(player_button, "clicked", G_CALLBACK(print_hello), NULL);
+    g_signal_connect(surrender, "clicked", G_CALLBACK(print_hello), NULL);
+    g_signal_connect(pause, "clicked", G_CALLBACK(print_hello), NULL);
+    g_signal_connect(quit_button, "clicked", G_CALLBACK(print_hello), NULL);
+}
+
 /*
  * @Description: Generate the graphic window.
  * This function is the principle of GTK 3.0,
@@ -163,23 +187,34 @@ void activate(GtkApplication *app, gpointer user_data) {
     GtkWidget *window;
     GtkWidget *frame;
     GtkWidget *drawing_area;
+    GtkWidget *box;
+    GtkWidget *button_box;
+
+
+    box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
+    button_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 
     window = gtk_application_window_new(app);
     gtk_window_set_title(GTK_WINDOW (window), "Gomoku");
-
     g_signal_connect (window, "destroy", G_CALLBACK(close_window), NULL);
 
     gtk_container_set_border_width(GTK_CONTAINER (window), 50);
+    gtk_container_add(GTK_CONTAINER (window), box);
 
     frame = gtk_frame_new(NULL);
     gtk_frame_set_shadow_type(GTK_FRAME (frame), GTK_SHADOW_IN);
-    gtk_container_add(GTK_CONTAINER (window), frame);
+    gtk_box_pack_start(box, frame, TRUE, TRUE, 0);
+    gtk_box_pack_start(box, button_box, TRUE, TRUE, 0);
+
+    create_button(button_box);
 
     drawing_area = gtk_drawing_area_new();
     /* set a minimum size */
-    gtk_widget_set_size_request(drawing_area, 900, 700);
+    gtk_widget_set_size_request(drawing_area, 700, 700);
 
     gtk_container_add(GTK_CONTAINER (frame), drawing_area);
+
+
 
     /* Signals used to handle the backing surface */
     g_signal_connect (drawing_area, "draw",
