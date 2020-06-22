@@ -7,6 +7,7 @@ static cairo_surface_t *surface = NULL;
 /* Initialize the status of start, 0 means not start yet */
 START_PLAYER_GAME = 0;
 extern int BOARD_ARRAY[ROW][COL];
+int winner_flag = 0;
 
 /* Initialize the player, at the beginning, it should be player 1 (black). */
 int player = 0;
@@ -128,7 +129,27 @@ static gboolean button_press_event_cb(GtkWidget *widget,
     /* paranoia check, in case we haven't gotten a configure event */
     if (surface == NULL)
         return FALSE;
-    if (START_PLAYER_GAME == 1) {
+
+    /*
+     * If there is a winner, game over and output winner info,
+     * meanwhile, reset the BOARD_ARRAY and winner_flag.
+     */
+    if (winner_flag == 1) {
+        START_PLAYER_GAME = 0;
+        winner_flag = 0;
+        player = 0;
+        memset(BOARD_ARRAY, 0, sizeof(BOARD_ARRAY));
+        clear_surface();
+        printf("reset:\n");
+        for (int i = 0; i < ROW; ++i) {
+            printf("\n");
+            for (int j = 0; j < COL; ++j) {
+                printf("%d", BOARD_ARRAY[i][j]);
+            }
+        }
+    }
+
+    if (START_PLAYER_GAME == 1 && winner_flag == 0) {
         if (event->x >= 90 && event->x <= 560 &&
             (fmod(event->x, 25) <= 10 || fmod(event->x, 25) >= 15)) {
             xflag = 1;
@@ -152,6 +173,7 @@ static gboolean button_press_event_cb(GtkWidget *widget,
                 }
                 printf("\n");
                 printf("%d\n", check_winner(BOARD_ARRAY, player));
+                winner_flag = check_winner(BOARD_ARRAY, player);
             }
         }
     }

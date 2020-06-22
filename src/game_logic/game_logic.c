@@ -30,7 +30,6 @@ int put_stone_logic(float x, float y, int player) {
 }
 
 /*
- * Todo: check winner function
  * @Input: board_array[ROW][COl], player
  * @Return: 1 is win, 0 is no winner.
  */
