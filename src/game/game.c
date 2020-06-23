@@ -69,7 +69,7 @@ void generate_patterns(void) {
     }
 
     /*
-     * Pattern 4 -> Diagonal (145 degrees)
+     * Pattern 4 -> Diagonal (45 degrees)
      */
     for (int i = 0; i < PATTERN_SIZE; i++) {
         for (int j = 0; j < PATTERN_SIZE; j++) {
