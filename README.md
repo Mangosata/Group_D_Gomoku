@@ -126,7 +126,7 @@ make all
 Finally, to run the game:
 
 ```bash
-./main_game
+./bin/main_game
 ```
 ## How to run the Tests:
 #### Test 1:
@@ -138,7 +138,7 @@ To run this test, use:
 make test_1
 ```
 ``` bash
-./test_1
+./bin/tests/test_1
 ```
 
 #### Test 2:
@@ -152,7 +152,7 @@ To run this test, use:
 make test_2
 ```
 ``` bash
-./test_2
+./bin/tests/test_2
 ```
 
 
@@ -164,7 +164,7 @@ To run this test, use:
 make test_3
 ```
 ``` bash
-./test_3
+./bin/tests/test_3
 ```
 #### Test 4:
 
@@ -174,7 +174,7 @@ To run this test, use:
 make test_4
 ```
 ``` bash
-./test_4
+./bin/tests/test_4
 ```
 
 #### Test 5:
@@ -185,7 +185,7 @@ To run this test, use:
 make test_5
 ```
 ``` bash
-./test_5
+./bin/tests/test_5
 ```
 
 #### Test 6:
@@ -196,7 +196,7 @@ To run this test, use:
 make test_6
 ```
 ``` bash
-./test_6
+./bin/tests/test_6
 ```
 
 #### Test 7:
@@ -207,7 +207,7 @@ To run this test, use:
 make test_7
 ```
 ``` bash
-./test_7
+./bin/tests/test_7
 ```
 
 
@@ -219,7 +219,7 @@ To run this test, use:
 make test_8
 ```
 ``` bash
-./test_8
+./bin/tests/test_8
 ```
 
 
@@ -231,5 +231,5 @@ To run this test, use:
 make test_9
 ```
 ``` bash
-./test_9
+./bin/tests/test_9
 ```
