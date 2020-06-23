@@ -17,6 +17,27 @@
 int pattern[NUMBER_OF_PATTERNS][PATTERN_SIZE][PATTERN_SIZE];
 
 /*
+ * @Parameter: float,
+ * @Return: void,
+ * @Description: It creates a delay in seconds.
+ */
+void delay(float number_of_seconds){ 
+    /*
+     * Converting time into milli_seconds
+     */
+    int milli_seconds = 1000 * number_of_seconds; 
+    /*
+     * Storing start time
+     */  
+    clock_t start_time = clock(); 
+    /*
+     * looping till required time is not achieved
+     */  
+    while (clock() < start_time + milli_seconds) 
+        ; 
+} 
+
+/*
  * @Parameter: void,
  * @Return: void,
  * @Description: This function will generate the 4 different patterns that will be used for checking the status of victory.
@@ -198,6 +219,7 @@ int check_winner(int board_size, char board[][board_size], int player_name) {
                 }
                 if (check == 5 || check == -5) {
                     printf("\n!! Player %d is the winner!!\n", player_name);
+                    delay(3);
                     exit(0);
                 }
                 check = 0;
