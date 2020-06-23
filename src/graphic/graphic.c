@@ -4,42 +4,54 @@
 
 cairo_surface_t *SURFACE = NULL;
 
-/* Initialize the status of start, 0 means not start yet */
+/*
+ * Initialize the status of start, 0 means not start yet,
+ * -1 means one of players surrendered,
+ * 1 means game started.
+ */
 START_PLAYER_GAME = 0;
-PAUSE_GAME = FALSE;
-WINNER_FLAG = 0;
-extern int BOARD_ARRAY[ROW][COL];
 
-/* Initialize the player, at the beginning, it should be player 1 (black). */
+/* Initialize the status of pause, 0 means not pause. */
+PAUSE_GAME = FALSE;
+
+/* Initialize the winner status, 0 means no winner yet. */
+WINNER_FLAG = 0;
+
+/*
+ * Initialize the board array, 0 means no stone,
+ * 1 means player 1's stone, 2 means player 2's stone.
+ */
+BOARD_ARRAY[ROW][COL] = {0};
+
+/* Initialize the player, it should be player 1 (black) first. */
 PLAYER = 1;
 
 
-/* Create a new surface of the appropriate size to store our scribbles */
+/* Create a new surface of the appropriate size to store our scribbles. */
 static gboolean configure_event_cb(GtkWidget *widget,
                                    GdkEventConfigure *event,
                                    gpointer data) {
-    if (SURFACE) {
-        cairo_surface_destroy(SURFACE);
+    if (WINNER_FLAG == 0) {
+        if (SURFACE) {
+            cairo_surface_destroy(SURFACE);
+        }
+        SURFACE = gdk_window_create_similar_surface(gtk_widget_get_window(widget),
+                                                    CAIRO_CONTENT_COLOR,
+                                                    gtk_widget_get_allocated_width(widget),
+                                                    gtk_widget_get_allocated_height(widget));
+        reset();
     }
-    SURFACE = gdk_window_create_similar_surface(gtk_widget_get_window(widget),
-                                                CAIRO_CONTENT_COLOR,
-                                                gtk_widget_get_allocated_width(widget),
-                                                gtk_widget_get_allocated_height(widget));
-    /* Initialize the surface to white */
-    clear_surface();
-
-    /* We've handled the configure event, no need for further processing. */
-    return TRUE;
+    return FALSE;
 }
 
 
 /*
  * @Description: Draw the board with background color.
- * The board has a 18 * 18 size and background color is off-white.
+ *               The board has a 18 * 18 size and background color is off-white.
  */
 static gboolean draw_board(GtkWidget *widget, cairo_t *cr,
-                           cairo_t *cr1, cairo_t *cr2, cairo_t *cr3,
-                           gpointer user_data) {
+                           cairo_t *cr1) {
+
     cairo_set_source_surface(cr, SURFACE, 0, 0);
     cairo_paint(cr);
 
@@ -68,8 +80,10 @@ static gboolean draw_board(GtkWidget *widget, cairo_t *cr,
 
 /*
  * @Description: Draw the black stone and blue stone,
- * player 1 is black,
- * player 2 is blue.
+ *               player 1 is black, player 2 is blue.
+ *               When finishing draw stone, exchange the value of PLAYER.
+ *               For example, if the current player is 1,
+ *               after drawing, change it to value 2.
  */
 static void draw_stone(GtkWidget *widget,
                        gdouble x,
@@ -106,43 +120,22 @@ static void draw_stone(GtkWidget *widget,
 }
 
 /*
- * @Description: Handle button press events by putting a stone,
- * depending which player is playing now.
- * The button-press signal handler receives
- * a GdkEventButton struct which contains this information.
- * If mouse clicks near the intersection,
- * and only when xflag and yflag both satisfy the requirements,
- * put the stone on the board.
+ * @Description: Handle button press (click on board) events by putting a stone,
+ *               depending which player is playing now.
+ *               If mouse clicks near the intersection,
+ *               only when xflag and yflag both satisfy the requirements,
+ *               put the stone on the board.
  */
 static gboolean button_press_event_cb(GtkWidget *widget,
                                       GdkEventButton *event,
                                       gpointer label) {
     int xflag = 0, yflag = 0;
 
-    /* paranoia check, in case we haven't gotten a configure event */
+    /* paranoia check, in case we haven't gotten a configure event. */
     if (SURFACE == NULL)
         return FALSE;
 
-    /*
-     * If there is a winner, game over and output winner info,
-     * meanwhile, reset the BOARD_ARRAY and winner_flag.
-     */
-    if (WINNER_FLAG == 1) {
-        START_PLAYER_GAME = 0;
-        WINNER_FLAG = 0;
-
-        PLAYER = 0;
-        memset(BOARD_ARRAY, 0, sizeof(BOARD_ARRAY));
-
-        printf("reset:\n");
-        for (int i = 0; i < ROW; ++i) {
-            printf("\n");
-            for (int j = 0; j < COL; ++j) {
-                printf("%d", BOARD_ARRAY[i][j]);
-            }
-        }
-    }
-
+    /* Make sure the game is start and no winner for now. */
     if (START_PLAYER_GAME == 1 && WINNER_FLAG == 0 && !PAUSE_GAME) {
         if (event->x >= 90 && event->x <= 560 &&
             (fmod(event->x, 25) <= 10 || fmod(event->x, 25) >= 15)) {
@@ -156,25 +149,34 @@ static gboolean button_press_event_cb(GtkWidget *widget,
         if (event->button == GDK_BUTTON_PRIMARY && xflag == 1 && yflag == 1) {
             /* Check if the stone is overlay */
             if (put_stone_logic(event->x, event->y, PLAYER) != 0) {
-                int row = event->x, col = event->y;
                 draw_stone(widget, (int) (event->x / 25 + 0.5) * 25,
                            (int) (event->y / 25 + 0.5) * 25);
-                for (int i = 0; i < ROW; ++i) {
-                    printf("\n");
-                    for (int j = 0; j < COL; ++j) {
-                        printf("%d", BOARD_ARRAY[i][j]);
+
+                /* Check if there is winner, if has a winner WINNER_FLAG will be 1. */
+                WINNER_FLAG = check_winner(BOARD_ARRAY);
+                if (WINNER_FLAG == 1) {
+                    char *winner_info;
+                    /* Outputs who is the winner. */
+                    if (PLAYER == 1) {
+                        winner_info = " Winner is Player 2\n Click PvP to play again!";
+                        gtk_label_set_text(label, winner_info);
+                    } else if (PLAYER == 2) {
+                        winner_info = " Winner is Player 1\n Click PvP to play again!";
+                        gtk_label_set_text(label, winner_info);
                     }
+                    START_PLAYER_GAME = -1;
                 }
-                printf("\n");
-                WINNER_FLAG = check_winner(BOARD_ARRAY, PLAYER, label);
             }
         }
     }
 
-    return TRUE;
+    return FALSE;
 }
 
-
+/*
+ * @Description: Create a series of buttons,
+ *               included Player vs Player, Surrender, Pause and Quit button.
+ */
 static GtkWidget *create_button(GtkWidget *button_box) {
     GtkWidget *player_button;
     GtkWidget *quit_button;
@@ -192,9 +194,9 @@ static GtkWidget *create_button(GtkWidget *button_box) {
     gtk_box_pack_start(button_box, pause, FALSE, FALSE, 0);
     gtk_box_pack_start(button_box, quit_button, FALSE, FALSE, 0);
 
-
+    /* Connect to respective function */
     g_signal_connect(player_button, "clicked", G_CALLBACK(button_start_player), (gpointer) label);
-    g_signal_connect(surrender, "clicked", G_CALLBACK(button_surrender), NULL);
+    g_signal_connect(surrender, "clicked", G_CALLBACK(button_surrender), (gpointer) label);
     g_signal_connect(pause, "clicked", G_CALLBACK(button_pause), NULL);
     g_signal_connect(quit_button, "clicked", G_CALLBACK(close_window), NULL);
 
@@ -204,10 +206,10 @@ static GtkWidget *create_button(GtkWidget *button_box) {
 
 /*
  * @Description: Generate the graphic window.
- * This function is the principle of GTK 3.0,
- * it will be called in main.c
+ *               This function is the principle of GTK 3.0,
+ *               it will be called in main.c.
  */
-void activate(GtkApplication *app, gpointer user_data) {
+void activate(GtkApplication *app) {
     GtkWidget *window;
     GtkWidget *frame;
     GtkWidget *drawing_area;
@@ -215,7 +217,7 @@ void activate(GtkApplication *app, gpointer user_data) {
     GtkWidget *button_box;
     GtkWidget *label;
 
-
+    /* Create two boxes for storing widgets in the window. */
     box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
     button_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 
@@ -226,28 +228,27 @@ void activate(GtkApplication *app, gpointer user_data) {
     gtk_container_set_border_width(GTK_CONTAINER (window), 50);
     gtk_container_add(GTK_CONTAINER (window), box);
 
+    /* Board box. */
     frame = gtk_frame_new(NULL);
     gtk_frame_set_shadow_type(GTK_FRAME (frame), GTK_SHADOW_IN);
     gtk_box_pack_start(box, frame, TRUE, TRUE, 0);
+
+    /* Button box. */
     gtk_box_pack_start(box, button_box, TRUE, TRUE, 0);
-
     label = create_button(button_box);
-
     drawing_area = gtk_drawing_area_new();
-    /* set a minimum size */
-    gtk_widget_set_size_request(drawing_area, 700, 700);
 
+    /* Set a minimum size of board. */
+    gtk_widget_set_size_request(drawing_area, 700, 700);
     gtk_container_add(GTK_CONTAINER (frame), drawing_area);
 
-
-
-    /* Signals used to handle the backing surface */
+    /* Signals used to handle the backing surface. */
     g_signal_connect (drawing_area, "draw",
                       G_CALLBACK(draw_board), NULL);
     g_signal_connect (drawing_area, "configure-event",
                       G_CALLBACK(configure_event_cb), NULL);
 
-    /* Event signals */
+    /* Event signals. */
     g_signal_connect (drawing_area, "button-press-event",
                       G_CALLBACK(button_press_event_cb), (gpointer) label);
     gtk_widget_set_events(drawing_area, gtk_widget_get_events(drawing_area)
