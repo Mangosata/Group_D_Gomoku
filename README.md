@@ -2,11 +2,11 @@
 
 - [Group_D_Gomoku](#group-d-gomoku)
   * [Organization](#organization)
-  * [Authors:](#authors)
+  * [Authors](#authors)
   * [Description](#description)
   * [File Structure](#file-structure)
-  * [How to use it:](#how-to-use-it)
-  * [How to run the Tests:](#how-to-run-the-tests)
+  * [How to use it](#how-to-use-it)
+  * [How to run the Tests](#how-to-run-the-tests)
     - [Test 1:](#test-1)
     - [Test 2:](#test-2)
     - [Test 3:](#test-3)
@@ -24,7 +24,7 @@ University of Ottawa & Carleton University
 
 
 
-## Authors:
+## Authors
 
 Bin Jia
 
@@ -103,7 +103,7 @@ The file structure shown like the following:
 
 ****
 
-## How to use it:
+## How to use it
 
 You can clone the console version using the following command:
 
@@ -127,7 +127,7 @@ Have fun with it!
 
 ****
 
-## How to run the Tests:
+## How to run the Tests
 
 #### Test 1:
 
