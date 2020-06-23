@@ -66,32 +66,33 @@ The file structure shown like the following:
 │  │    ├─game.c
 │  └─main.c
 └─test
- ├─data
- ├─include
- ├─src
- │  ├─board
- │  │    └─board_a.c
- │  ├─game
- │  │    ├─game_a.c
- │  │    ├─game_b.c
- │  │    └─game_c.c
- │  ├─tests
- │  │    ├─test_1.c
- │  │    ├─test_2.c
- │  │    ├─test_3.c
- │  │    ├─test_4.c
- │  │    ├─test_5.c
- │  │    ├─test_6.c
- │  │    ├─test_7.c
- │  │    ├─test_8.c
- │  │    └─test_9.c
- │  ├─main_a.c
- │  ├─main_b.c
- │  ├─main_c.c
- │  ├─main_d.c
- │  ├─main_e.c
- │  ├─main_f.c
- │  └─main_g.c
+│ ├─data
+│ ├─include
+│ ├─src
+│ │  ├─board
+│ │  │    └─board_a.c
+│ │  ├─game
+│ │  │    ├─game_a.c
+│ │  │    ├─game_b.c
+│ │  │    └─game_c.c
+│ │  ├─tests
+│ │  │    ├─test_1.c
+│ │  │    ├─test_2.c
+│ │  │    ├─test_3.c
+│ │  │    ├─test_4.c
+│ │  │    ├─test_5.c
+│ │  │    ├─test_6.c
+│ │  │    ├─test_7.c
+│ │  │    ├─test_8.c
+│ │  │    └─test_9.c
+│ │  ├─main_a.c
+│ │  ├─main_b.c
+│ │  ├─main_c.c
+│ │  ├─main_d.c
+│ │  ├─main_e.c
+│ │  ├─main_f.c
+│ │  └─main_g.c
+└─Makefile
 ```
 
 - bin folder is for the executable files. The tests folder in it will contain the executable test files.
