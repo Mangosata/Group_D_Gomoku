@@ -223,7 +223,7 @@ After that you should get a new file called wu. In the end, you need to enter fo
 ```bash
 ./wu
 ```
-![command](data/command.png)
+![command](data/command1.png)
 
 
 ## Detailed Instruction
