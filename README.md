@@ -188,11 +188,13 @@ If CLion hints you don't have cmake-build-debug folder, please **Reload CMake Pr
 
 If you are using other editors or IDEs in Windows and you want to run this graphical version, please follow the official tutorial https://www.gtk.org/docs/getting-started/hello-world/.
 
-
+****
 
 #### Run graphic version on Ubuntu
+
 To run the program, you need to install gcc first.
 Open the terminal first and then use this command line:
+
 ```bash
 sudo apt-get install build-essential
 ```
