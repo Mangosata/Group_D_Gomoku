@@ -16,35 +16,9 @@ Hongzhi Zhang
 
 
 
-## Project Statement
-
-Gomoku, also called Five in a Row, is an abstract strategy board game. It is traditionally played with Go pieces (black and white stones) on a Go board. It can be played using the 15×15 board or the 19×19 board. Players alternate turns to place a stone of their colour on an empty intersection. The winner is the first player to form an unbroken chain of five stones.
-
-![Gomoku](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Gomoku-game-3.svg/300px-Gomoku-game-3.svg.png)
-
-
-
-## Basic Functions:
-
-1. The main function is to achieve a two-player battle.
-
-2. The board size should be 15x15 or 19x19. Each player will have different colored stones (for example player 1 will have black and player 2 will have blue). After each move, the program will check if there is a winner or not.
-
-3. The victory condition is that when the five stones of the same player practice a straight line vertically or horizontally or diagonally, that player wins and then exits the game. You can exit the game at any time during the game.
-
-   
-
 ## Description
 
-The console version will provide two size boards shown like the following:
-
-   ![board](data/board.JPG)
-
-   After choosing the board size, player 1 can put the stone (X) on the board by inputting row and column, then change the turn, player 2 will put the stone (O) on the board by the same way, like following:
-
-   ![board_player](data/board_player.png)
-
-   If any player satisfy the victory condition, it will output who it the winner.
+This version is only for console. Please follow the below instruction to use it.
 
 
 
@@ -55,8 +29,9 @@ The file structure shown like the following:
 
 ```
 ├─bin
+│  └─tests
 ├─build
-│  └─cmake-build
+│  └─tests
 ├─data
 ├─include
 │  ├─board
@@ -102,13 +77,12 @@ The file structure shown like the following:
  │  └─main_g.c
 ```
 
-- the compiled objects will be created at the location as of C file.
-
+- bin folder is for the executable files. The tests folder in it will contain the executable test files.
+- build folder will contain the compile files (.o files). The test folder will contain the test object files.
 - include folder contains the header files.
-
 - src folder contains the source files.
-
 - test folder contains the test files.
+- data folder contains the pictures which README needs.
 
 ## How to use it:
 
@@ -128,8 +102,13 @@ Finally, to run the game:
 ```bash
 ./bin/main_game
 ```
+Have fun with it!
+
 ## How to run the Tests:
+
 #### Test 1:
+
+**@Function: select_board_size()**
 
 The test is used to test the select_board_size(). By testing, function’s behaviour can be noticed when values ranging from -10 to 10 are inputted randomly to function using the test_1.c. It should generate the board only if the value is 1 or 2. 
 
@@ -143,18 +122,20 @@ make test_1
 
 #### Test 2:
 
+**@Function: check_winner()**
+
 The test is used to test the check_winner(). In this, the function's output can be noticed when random coordinates are inputted by test_2.c. 
 Player 1 is represented by ‘X’: If player 1 is the winner, there should be five ‘X’ in a straight row.
 Player 2 is represented by ‘O’: If player 2 is the winner, there should be five ‘O’ in a straight row.
 Verification:It can be done by a person. If there is a winner, on the terminal, a tester can see if there are five ‘X’ or ‘O’ in a straight row.
 To run this test, use:
+
 ``` bash
 make test_2
 ```
 ``` bash
 ./bin/tests/test_2
 ```
-
 
 #### Test 3:
 
@@ -209,7 +190,6 @@ make test_7
 ``` bash
 ./bin/tests/test_7
 ```
-
 
 #### Test 8:
 

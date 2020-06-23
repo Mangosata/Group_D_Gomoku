@@ -36,11 +36,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="changed stone color.">
+    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="updated README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/graphic_logic/logic.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/graphic_logic/logic.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphic/graphic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphic/graphic.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphic_logic/logic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphic_logic/logic.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +93,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="CMake Application.Group_D_Gomoku" />
         <item itemvalue="CMake Application.Group_D_Gomoku" />
       </list>
     </recent_temporary>
