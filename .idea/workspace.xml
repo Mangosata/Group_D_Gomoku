@@ -36,7 +36,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="Updated .gitignore" />
+    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="Updated .gitignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -295,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592873801923</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Updated .gitignore">
+      <created>1592874083709</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1592874083709</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,10 +375,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="842" y="382" width="625" height="471" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1592679776046" />
-    <state x="481" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592873951608">
+    <state x="481" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592874184237">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="481" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592873951608" />
+    <state x="481" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592874184237" />
     <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1592539747003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -442,10 +451,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592690424230" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592873803096">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592874084720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592873803096" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592874084720" />
     <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592858185953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
