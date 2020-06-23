@@ -11,7 +11,6 @@ BINDIR_TESTS = bin\tests
 all: main
 
 test_1: main_a.o board_a.o test_1.o game_a.o
-	mkdir -p bin\tests
 	$(CC) $(OBJDIR_TESTS)\main_a.o $(OBJDIR_TESTS)\board_a.o $(OBJDIR_TESTS)\test_1.o $(OBJDIR_TESTS)\game_a.o -o $(BINDIR_TESTS)\test_1
 	
 test_2: main_a.o board_a.o test_1.o test_2.o game_b.o
