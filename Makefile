@@ -38,7 +38,7 @@ test_9: main_g.o board_a.o test_1.o test_2.o test_9.o game_b.o
 	$(CC) $(OBJDIR_TESTS)\main_g.o $(OBJDIR_TESTS)\board_a.o $(OBJDIR_TESTS)\test_1.o $(OBJDIR_TESTS)\test_2.o $(OBJDIR_TESTS)\test_9.o $(OBJDIR_TESTS)\game_b.o -o $(BINDIR_TESTS)\test_9
 
 main: main.o board.o game.o
-	$(CC) $(OBJDIR)\main.o $(OBJDIR)\board.o $(OBJDIR)\game.o -o $(BINDIR)\main_game.exe
+	$(CC) $(OBJDIR)\main.o $(OBJDIR)\board.o $(OBJDIR)\game.o -o $(BINDIR)\main_game
 
 main.o: .\src\main.c
 	$(CC) $(CFLAGS) .\src\main.c -o $(OBJDIR)\main.o
