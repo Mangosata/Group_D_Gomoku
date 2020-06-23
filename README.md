@@ -1,8 +1,19 @@
 # Group_D_Gomoku
 
-[TOC]
+- [Group_D_Gomoku](#group-d-gomoku)
+  * [Organization](#organization)
+  * [Authors](#authors)
+  * [Project Statement](#project-statement)
+  * [Basic Functions:](#basic-functions-)
+  * [Further Functions](#further-functions)
+  * [Description](#description)
+  * [File Structure](#file-structure)
+  * [How to use](#how-to-use)
+      - [1. Console Version](#1-console-version)
+      - [2. Graphic Version](#2-graphic-version)
+  * [Detailed Instruction](#detailed-instruction)
 
-
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Organization
 
