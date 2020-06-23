@@ -1,4 +1,5 @@
-#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/game/game.h"
+#include "game/game.h"
+#include "test/test.h"
 
 /* 
  * PATTERN_SIZE defines the number of elements in a straight line required to win the game 
@@ -136,8 +137,8 @@ void is_full_board(int board_size, char board[][board_size]) {
     }
 
     if (is_full == board_size * board_size) {
-        printf("!!! The board is full !!!\n\tTIE\n");
-        exit(0);
+        printf("!!! The board is full !!!\n\tTIE\n This window will close in 10 seconds!");
+		delay(10);
     }
 }
 

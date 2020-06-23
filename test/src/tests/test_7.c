@@ -1,7 +1,7 @@
-#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/game/game.h"
-#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/test/test.h"
+#include "game/game.h"
+#include "test/test.h"
 /*
- * It will randomly generate the number between -10 to 10. But input values 1 and 2 of type integer are acceptable
+ * It will randomly generate the number between 1 to 14 as the size of board.
  */
 
 int unit_test_when_board_size_btw_1_and_14(void){

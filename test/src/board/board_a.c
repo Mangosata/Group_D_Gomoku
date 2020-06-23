@@ -1,5 +1,5 @@
-#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/board/board.h"
-#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/test/test.h"
+#include "board/board.h"
+#include "test/test.h"
 
 /*
  * @Parameter: void,

@@ -1,5 +1,5 @@
-#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/game/game.h"
-#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/test/test.h"
+#include "game/game.h"
+#include "test/test.h"
 
 int main(void) {
 
@@ -17,6 +17,11 @@ int main(void) {
     /*
      * Initailizing the Board with all the elements as 0s
      */
+	if (board_size <=0){
+		printf("\nInvalid Board Size");
+		delay(2);
+		exit(1);
+	}
     char board[board_size][board_size];
     for (int i = 0; i < board_size; i++) {
         for (int j = 0; j < board_size; j++) {

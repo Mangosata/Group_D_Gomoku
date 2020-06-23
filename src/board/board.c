@@ -1,4 +1,4 @@
-#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/board/board.h"
+#include "board/board.h"
 
 /*
  * @Parameter: void,
