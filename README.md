@@ -83,22 +83,19 @@ The file structure shown like the following:
 │  └─graphic
 │  │    ├─graphic.c
 └─test
- ├─data
- ├─include
- └─src
+│  ├─data
+│  ├─include
+│  └─src
+└─makefile
+└─README.md
 ```
 
-- build folder contains the files generated at compile time.
-
-- bin folder contains the executable file.
-
-- data should contain data file we used, but we do not have any data in this project, so we put the Readme pictures in it.
-
+- bin folder will contain the executable file.
+- build folder will contain the files generated at compile time.
+- data should contain data file we used, but we do not have any data in this project, so we put the README pictures in it.
 - include folder contains the header files.
-
 - src folder contains the source files.
-
-- test folder contains the test files.
+- test folder contains the test files (we only provides tests in console version, please move to this link to check https://github.com/Mangosata/Group_D_Gomoku/tree/console_version).
 
 ## How to use
 
@@ -123,7 +120,7 @@ First, you need to clone this repository to your local using the following comma
 ```bash
 git clone https://github.com/Mangosata/Group_D_Gomoku.git
 ```
-Next, to run the graphic version, you should download and install GTK 3.0 first, here is the download link:
+Next, to run the graphic version, you should download and install GTK +3.0 first (we provide a simple and fast way to install GTK +3.0 on Ubuntu, please see below for details), here is the download link:
 
 - For windows:
   - https://www.gtk.org/docs/installations/windows/
@@ -137,7 +134,7 @@ Next, to run the graphic version, you should download and install GTK 3.0 first,
 
 **Run graphic version on Ubuntu**
 
-To run the program, you need to install gcc first.
+After you clone this repository to your local, you need to install GCC to run the program first.
 
 Open the terminal first and then use this command line:
 
@@ -145,50 +142,47 @@ Open the terminal first and then use this command line:
   sudo apt-get install build-essential
   ```
 
-After you install gcc and GTK +3.0 you can run the program.
+Then, you need to install GTK +3.0 using the following command line:
 
-Firstly, you need to copy graphic.c, game_logic.c and button_logic then paste to the folder src.
+```bash
+sudo apt-get install libgtk-3-dev
+```
 
-  ![folder](data/folder.png)
+Install pkg-config:
 
-Then, because we change the path of .c file, we need to change the path of .h file in .c file.
+```bash
+sudo apt-get install pkg-config
+```
 
-change ../../include to ../include, for example, for game_logic.h path in game_logic.c.
+After you install GCC and GTK +3.0, please go to the Group_D_Gomoku directory:
 
-original one is:
+```bash
+cd Group_D_Gomoku
+```
 
-  ```bash
-  #include "../../include/game_logic/game_logic.h"
-  ```
+Then just use the make command to compile this project easily:
 
-you need to change to:
+```bash
+make
+```
 
-  ```bash
-  #include "../include/game_logic/game_logic.h"
-  ```
+Now, you should have some .o files in build folder and an executable file in bin folder. So you just need to open this executable main file:
 
-Next, open the terminal in src and enter the following command:
+```bash
+./bin/main
+```
 
-  ```bash
-  gcc -o wu main.c graphic.c button_logic.c game_logic.c 'pkg-config --cflags --libs gtk+-3.0' -lm
-  ```
+DONE! You can play our Gomoku now! Have fun!
 
-  ![command](data/command.png)
-
-After that you should get a new file called wu. In the end, you need to enter following command and you will run the program.
-
-  ```bash
-  ./wu
-  ```
-
-  ![command](data/command1.png)
 ****
 
 
 
 **Run graphic version on Windows**
 
-My environment is:
+Because it is so hard to config a perfect environment on Windows, we only provide a method using CLion IDE which will simplify the process of setting environment. See below for details.
+
+For success running, I have an environment like the following:
 
 - Windows 10
 
@@ -231,13 +225,17 @@ If CLion hints you don't have cmake-build-debug folder, please **Reload CMake Pr
 
 ![reload_cmake](data/reload_cmake.png)
 
+
+
+Now you can run the graphic interface for Gomoku. Have fun with it!
+
+
+
 If you are using other editors or IDEs in Windows and you want to run this graphical version, please follow the official tutorial https://www.gtk.org/docs/getting-started/hello-world/.
 
-
-After that you can run the game.
 
 
 ## Detailed Instruction
 
-If you want to read the detailed instruction, please go to our wiki page https://github.com/Mangosata/Group_D_Gomoku/wiki.
+**If you want to know the detailed instruction and function explanations, please go to our wiki page https://github.com/Mangosata/Group_D_Gomoku/wiki.**
 
