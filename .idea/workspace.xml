@@ -36,9 +36,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e690b2-a723-4e50-b18b-264bb84d47db" name="Default Changelist" comment="added .gitattributes">
+    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="changed stone color.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
