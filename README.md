@@ -72,7 +72,7 @@ Gomoku, also called Five in a Row, is an abstract strategy board game. It is tra
 
 2. We also provide a graphic version, but this version only has a 19 * 19 board and the stones are black and blue. Player can click "Player vs Player" button to start game. Moreover, they can click "Surrender" button to surrender or click "Pause" to pause. If the player clicks quit button, he will close the window. The graphic interface looks like the following:
 
-   ![graphic_board](graphic_board.png)
+   ![graphic_board](graphic_board-1592871703676.png)
 
 
 
@@ -104,7 +104,13 @@ Now, you will get a main.exe file under "src" directory, open it and play game! 
 
 #### 2. Graphic Version
 
-To run the graphic version, you should download and install GTK 3.0 first, here is the download link:
+First, you need to clone this repository to your local using the following command:
+
+```bash
+git clone https://github.com/Mangosata/Group_D_Gomoku.git
+```
+
+Next, to run the graphic version, you should download and install GTK 3.0 first, here is the download link:
 
 - For windows:
   - https://www.gtk.org/docs/installations/windows/
@@ -117,7 +123,7 @@ My environment is:
 
 - Windows 10
 
-- Clion 2020.1.1
+- CLion 2020.1.1
 
 - GTK +3.0
 
@@ -126,6 +132,8 @@ My environment is:
   - Installed following GTK website https://www.gtk.org/docs/installations/windows/#using-gtk-from-msys2-packages
 
     Use this command`pacman -S mingw-w64-x86_64-toolchain base-devel`
+    
+    This package will provide a gcc and g++ for compile.
 
 ****
 
@@ -150,7 +158,7 @@ If you are using Clion, you can click "Run" button to run this program easily.
 
 ![clion_run](clion_run.png)
 
-If you are using other editors or IDEs in Windows, please follow the official tutorial https://www.gtk.org/docs/getting-started/hello-world/.
+If you are using other editors or IDEs in Windows and you want to run this graphical version, please follow the official tutorial https://www.gtk.org/docs/getting-started/hello-world/.
 
 
 
