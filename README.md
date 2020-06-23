@@ -88,7 +88,17 @@ The file structure shown like the following:
  └─src
 ```
 
+build folder contains the files generated at compile time.
 
+bin folder contains the executable file.
+
+data should contain data file we used, but we do not have any data in this project, so we put the Readme pictures in it.
+
+include folder contains the header files.
+
+src folder contains the source files.
+
+test folder contains the test files.
 
 ## How to use
 
