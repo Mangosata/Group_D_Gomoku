@@ -112,19 +112,9 @@ You can clone the console version using the following command:
 git clone -b console_version https://github.com/Mangosata/Group_D_Gomoku.git
 ```
 
-Then open a terminal in the project directory (the project folder should call Group_D_Gomoku) and  use the following command to go to the "src" folder:
+Then, please click this link to see the tutorial for console version.
 
-``` bash
-cd src
-```
-
-Finally, use this command to compile main.c:
-
-```bash
-gcc .\main.c .\game\game.c .\board\board.c -o main
-```
-
-Now, you will get a main.exe file under "src" directory, open it and play game! Have fun!
+https://github.com/Mangosata/Group_D_Gomoku/tree/console_version
 
 #### 2. Graphic Version
 
@@ -133,7 +123,6 @@ First, you need to clone this repository to your local using the following comma
 ```bash
 git clone https://github.com/Mangosata/Group_D_Gomoku.git
 ```
-
 Next, to run the graphic version, you should download and install GTK 3.0 first, here is the download link:
 
 - For windows:
@@ -142,6 +131,58 @@ Next, to run the graphic version, you should download and install GTK 3.0 first,
   - https://www.gtk.org/docs/installations/linux/
 - For MacOS:
   - https://www.gtk.org/docs/installations/macos/
+****
+
+
+
+#####  Run graphic version on Ubuntu
+
+  To run the program, you need to install gcc first.
+  Open the terminal first and then use this command line:
+
+  ```bash
+  sudo apt-get install build-essential
+  ```
+
+  After you install gcc and GTK +3.0 you can run the program.
+  Firstly, you need to copy graphic.c, game_logic.c and button_logic then paste to the folder src.
+
+  ![folder](data/folder.png)
+
+  Then, because we change the path of .c file, we need to change the path of .h file in .c file.
+  change ../../include to ../include, for example, for game_logic.h path in game_logic.c.
+  original one is:
+
+  ```bash
+  #include "../../include/game_logic/game_logic.h"
+  ```
+
+  you need to change to:
+
+  ```bash
+  #include "../include/game_logic/game_logic.h"
+  ```
+
+  Next, open the terminal in src and enter the following command:
+
+  ```bash
+  gcc -o wu main.c graphic.c button_logic.c game_logic.c 'pkg-config --cflags --libs gtk+-3.0' -lm
+  ```
+
+  ![command](data/command.png)
+
+  After that you should get a new file called wu. In the end, you need to enter following command and you will run the program.
+
+  ```bash
+  ./wu
+  ```
+
+  ![command](data/command1.png)
+****
+
+
+
+##### Run graphic version on Windows
 
 My environment is:
 
@@ -161,7 +202,7 @@ My environment is:
 
 ****
 
-After you install GTK 3.0, you should add the following code (if it does not exist in CMakeList.txt) into CMakeList.txt.
+After you installed GTK 3.0, you should add the following code (if it does not exist in CMakeList.txt) into CMakeList.txt.
 
 ```c
 cmake_minimum_required(VERSION 3.16)
@@ -188,44 +229,7 @@ If CLion hints you don't have cmake-build-debug folder, please **Reload CMake Pr
 
 If you are using other editors or IDEs in Windows and you want to run this graphical version, please follow the official tutorial https://www.gtk.org/docs/getting-started/hello-world/.
 
-****
 
-#### Run graphic version on Ubuntu
-
-To run the program, you need to install gcc first.
-Open the terminal first and then use this command line:
-
-```bash
-sudo apt-get install build-essential
-```
-After you install gcc and gtk3.0 you can run the programe.
-Firstly, you need to copy graphic.c, game_logic.c and button_logic then paste to the folder src.
-
-![folder](data/folder.png)
-
-Then, because we change the path of .c file, we need to change the path of .h file in .c file.
-change ../../include to ../include, for example, for game_logic.h path in game_logic.c.
-original one is:
-```bash
-#include "../../include/game_logic/game_logic.h"
-```
-you need to change to:
-```bash
-#include "../include/game_logic/game_logic.h"
-```
-Next, open the terminal in src and enter the following command:
-
-```bash
-gcc -o wu main.c graphic.c button_logic.c game_logic.c 'pkg-config --cflags --libs gtk+-3.0' -lm
-```
-![command](data/command.png)
-
-After that you should get a new file called wu. In the end, you need to enter following command and you will run the program.
-
-```bash
-./wu
-```
-![command](data/command1.png)
 
 
 ## Detailed Instruction

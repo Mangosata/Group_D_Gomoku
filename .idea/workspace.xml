@@ -37,6 +37,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="updated .gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,6 +87,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Group_D_Gomoku" />
       <recent name="F:\Group_D_Gomoku\src" />
     </key>
   </component>
@@ -101,7 +103,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="18e690b2-a723-4e50-b18b-264bb84d47db" name="Default Changelist" comment="added .gitattributes" />
+      <changelist id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="updated .gitignore" />
       <created>1589930405244</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -115,6 +117,7 @@
       <workItem from="1592606516144" duration="9064000" />
       <workItem from="1592679708632" duration="308000" />
       <workItem from="1592882520404" duration="101000" />
+      <workItem from="1592934841909" duration="600000" />
     </task>
     <task id="LOCAL-00001" summary="making interface">
       <created>1592546893008</created>
@@ -467,10 +470,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592858493290" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592603460472">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592931552318">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592603460472" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592931552318" />
     <state x="706" y="386" key="Github.CreatePullRequestDialog" timestamp="1592871786153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
