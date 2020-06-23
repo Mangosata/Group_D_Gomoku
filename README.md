@@ -166,6 +166,10 @@ If you are using Clion, you can click "Run" button to run this program easily.
 
 ![clion_run](data\clion_run.png)
 
+If CLion hints you don't have cmake-build-debug folder, please **Reload CMake Project** by clicking the right mouse button in project window.
+
+![reload_cmake](data\reload_cmake.png)
+
 If you are using other editors or IDEs in Windows and you want to run this graphical version, please follow the official tutorial https://www.gtk.org/docs/getting-started/hello-world/.
 
 
