@@ -1,4 +1,4 @@
-﻿# Group_D_Gomoku
+# Group_D_Gomoku
 
 ## Organization
 
@@ -197,6 +197,4 @@ If you are using other editors or IDEs in Windows and you want to run this graph
 ## Detailed Instruction
 
 If you want to read the detailed instruction, please go to our wiki page https://github.com/Mangosata/Group_D_Gomoku/wiki.
-
-
 
