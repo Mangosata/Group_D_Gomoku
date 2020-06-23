@@ -1,4 +1,5 @@
 #include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/game/game.h"
+#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/test/test.h"
 
 int main(void) {
 

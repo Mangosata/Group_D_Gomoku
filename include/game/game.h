@@ -10,7 +10,10 @@
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
 #include "../../include/board/board.h"
+
+void delay(float);
 
 void generate_patterns(void);
 

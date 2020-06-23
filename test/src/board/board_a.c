@@ -1,4 +1,5 @@
 #include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/board/board.h"
+#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/test/test.h"
 
 /*
  * @Parameter: void,
@@ -11,7 +12,11 @@ int select_board_size(void) {
     int board_size, select_board;
     SELECTSIZE:
     printf("Select the Board Size:\nPress 1 to select the 15*15 board\nPress 2 to select the 19*19 board\n\nEnter your Choice: ");
-    scanf("%d", &select_board);
+	
+    /*
+	 * Replaced command -> scanf("%d", &select_board);
+	 */
+	select_board = unit_test_select_board_size();
     switch (select_board) {
         case 1:
             board_size = 15;

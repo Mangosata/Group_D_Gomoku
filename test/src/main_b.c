@@ -1,4 +1,5 @@
 #include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/game/game.h"
+#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/test/test.h"
 
 int main(void) {
 
@@ -11,7 +12,8 @@ int main(void) {
      * calling the function "select_board_size" to intailize the board size
      */
     int board_size;
-    board_size = select_board_size();
+    board_size = unit_test_when_board_size_19();
+	assert(board_size == 19);
 
     /*
      * Initailizing the Board with all the elements as 0s

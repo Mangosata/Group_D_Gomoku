@@ -1,4 +1,5 @@
 #include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/game/game.h"
+#include "/cygdrive/C/Users/gshar/Downloads/C Project/check/Group_D_Gomoku/include/test/test.h"
 
 /* 
  * PATTERN_SIZE defines the number of elements in a straight line required to win the game 
@@ -157,11 +158,18 @@ void player_move(int board_size, char board[][board_size], int player_name) {
     PLAY_TURN:
     printf("\n!! Player %d turn!! \n!! Enter the Coordinates !!\n\nRow: ", player_name);
 
-    scanf("%d", &row);
-    printf("Column: ");
-    scanf("%d", &column);
-
-    printf("\n");
+    /*
+	 * scanf("%d", &row);
+	 */
+	row = unit_test_check_winner(board_size);
+	printf("Column: ");
+	
+	/*
+	 * scanf("%d", &column);
+	 */
+	column = unit_test_check_winner(board_size);
+	
+	printf("\n");
 
     if (row >= board_size || row < 0 || column >= board_size || column < 0) {
         printf("row = %d\ncolumn = %d", row, column);
@@ -218,8 +226,8 @@ int check_winner(int board_size, char board[][board_size], int player_name) {
                     }
                 }
                 if (check == 5 || check == -5) {
-                    printf("\n!! Player %d is the winner!!\n", player_name);
-                    delay(3);
+                    printf("\n!! Player %d is the winner!!\n\nThis window will disappear in 10seconds!", player_name);
+                    delay(10);
                     exit(0);
                 }
                 check = 0;

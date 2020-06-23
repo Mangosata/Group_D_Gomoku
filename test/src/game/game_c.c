@@ -157,11 +157,18 @@ void player_move(int board_size, char board[][board_size], int player_name) {
     PLAY_TURN:
     printf("\n!! Player %d turn!! \n!! Enter the Coordinates !!\n\nRow: ", player_name);
 
-    scanf("%d", &row);
-    printf("Column: ");
-    scanf("%d", &column);
-
-    printf("\n");
+    /*
+	 * scanf("%d", &row);
+	 */
+	row = unit_test_player_move();
+	printf("Column: ");
+	
+	/*
+	 * scanf("%d", &column);
+	 */
+	column = unit_test_player_move();
+	
+	printf("\n\n");
 
     if (row >= board_size || row < 0 || column >= board_size || column < 0) {
         printf("row = %d\ncolumn = %d", row, column);
