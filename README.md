@@ -128,3 +128,108 @@ Finally, to run the game:
 ```bash
 ./main_game
 ```
+## How to run the Tests:
+#### Test 1:
+
+The test is used to test the select_board_size(). By testing, function’s behaviour can be noticed when values ranging from -10 to 10 are inputted randomly to function using the test_1.c. It should generate the board only if the value is 1 or 2. 
+
+To run this test, use:
+``` bash
+make test_1
+```
+``` bash
+./test_1
+```
+
+#### Test 2:
+
+The test is used to test the check_winner(). In this, the function's output can be noticed when random coordinates are inputted by test_2.c. 
+Player 1 is represented by ‘X’: If player 1 is the winner, there should be five ‘X’ in a straight row.
+Player 2 is represented by ‘O’: If player 2 is the winner, there should be five ‘O’ in a straight row.
+Verification:It can be done by a person. If there is a winner, on the terminal, a tester can see if there are five ‘X’ or ‘O’ in a straight row.
+To run this test, use:
+``` bash
+make test_2
+```
+``` bash
+./test_2
+```
+
+
+#### Test 3:
+
+The test is used to test the player_move(). Randomized coordinates will be given to the player_move() by test_3.c. The player should play a move only when the coordinates are between 0 and board_size-1. On the other instances, this test will show how the function will behave. 
+To run this test, use:
+``` bash
+make test_3
+```
+``` bash
+./test_3
+```
+#### Test 4:
+
+When the board is of size 19, this test will show the function’s behaviour. 
+To run this test, use:
+``` bash
+make test_4
+```
+``` bash
+./test_4
+```
+
+#### Test 5:
+
+When the board is of size 15, this test will show the function’s behaviour. 
+To run this test, use:
+``` bash
+make test_5
+```
+``` bash
+./test_5
+```
+
+#### Test 6:
+
+When the board size is greater than 15 and less than 19, this test will use a random board size and show the function’s behaviour. 
+To run this test, use:
+``` bash
+make test_6
+```
+``` bash
+./test_6
+```
+
+#### Test 7:
+
+When the board size is greater than 0 and less than 15, this test will use a random board size and show the function’s behaviour. 
+To run this test, use:
+``` bash
+make test_7
+```
+``` bash
+./test_7
+```
+
+
+#### Test 8:
+
+When the board size is greater than 19, this test will use a random board size between 20 and 100, and show the function’s behaviour.  
+To run this test, use:
+``` bash
+make test_8
+```
+``` bash
+./test_8
+```
+
+
+#### Test 9:
+
+When the board size is less than or equal to 0, this test will use a random board size between -100 and 0, and show the function’s behaviour.  
+To run this test, use:
+``` bash
+make test_9
+```
+``` bash
+./test_9
+```
