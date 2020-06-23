@@ -67,6 +67,7 @@ The file structure shown like the following:
 ```
 ├─bin
 ├─build
+│  └─cmake-build
 ├─data
 ├─include
 │  ├─button_logic
@@ -88,17 +89,18 @@ The file structure shown like the following:
  └─src
 ```
 
-build folder contains the files generated at compile time.
+- build folder contains the files generated at compile time.
+  - **Makefile is in the build/cmake-build.**
 
-bin folder contains the executable file.
+- bin folder contains the executable file.
 
-data should contain data file we used, but we do not have any data in this project, so we put the Readme pictures in it.
+- data should contain data file we used, but we do not have any data in this project, so we put the Readme pictures in it.
 
-include folder contains the header files.
+- include folder contains the header files.
 
-src folder contains the source files.
+- src folder contains the source files.
 
-test folder contains the test files.
+- test folder contains the test files.
 
 ## How to use
 
