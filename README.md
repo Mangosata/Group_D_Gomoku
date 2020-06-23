@@ -67,7 +67,6 @@ The file structure shown like the following:
 ```
 ├─bin
 ├─build
-│  └─cmake-build
 ├─data
 ├─include
 │  ├─button_logic
