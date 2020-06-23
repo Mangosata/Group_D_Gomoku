@@ -36,8 +36,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="Updated README.md">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="18e690b2-a723-4e50-b18b-264bb84d47db" name="Default Changelist" comment="added .gitattributes">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,7 +332,35 @@
       <option name="project" value="LOCAL" />
       <updated>1592874769084</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added .gitattributes">
+      <created>1592881027129</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1592881027129</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added .gitattributes">
+      <created>1592881093367</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1592881093367</updated>
+    </task>
+    <task id="LOCAL-00034" summary="added .gitattributes">
+      <created>1592881128668</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1592881128668</updated>
+    </task>
+    <task id="LOCAL-00035" summary="added .gitattributes">
+      <created>1592881176022</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1592881176022</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +424,8 @@
     <MESSAGE value="Updated comments and fixed some bugs." />
     <MESSAGE value="Updated .gitignore" />
     <MESSAGE value="Updated README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md" />
+    <MESSAGE value="added .gitattributes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added .gitattributes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="842" y="382" width="625" height="471" key="#Notifications" timestamp="1592679776046">
@@ -479,10 +508,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592690424230" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592874770151">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592881177015">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592874770151" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592881177015" />
     <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592858185953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

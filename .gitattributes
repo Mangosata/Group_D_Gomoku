@@ -1,1 +1,2 @@
 *.cmake linguist-language=c
+*.make linguist-language=c
