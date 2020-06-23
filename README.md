@@ -7,15 +7,15 @@
   * [File Structure](#file-structure)
   * [How to use it](#how-to-use-it)
   * [How to run the Tests](#how-to-run-the-tests)
-    - [Test 1:](#test-1)
-    - [Test 2:](#test-2)
-    - [Test 3:](#test-3)
-    - [Test 4:](#test-4)
-    - [Test 5:](#test-5)
-    - [Test 6:](#test-6)
-    - [Test 7:](#test-7)
-    - [Test 8:](#test-8)
-    - [Test 9:](#test-9)
+    - [Test 1](#test-1)
+    - [Test 2](#test-2)
+    - [Test 3](#test-3)
+    - [Test 4](#test-4)
+    - [Test 5](#test-5)
+    - [Test 6](#test-6)
+    - [Test 7](#test-7)
+    - [Test 8](#test-8)
+    - [Test 9](#test-9)
   * [More Details](#more-details)
 
 ## Organization
@@ -129,7 +129,7 @@ Have fun with it!
 
 ## How to run the Tests
 
-#### Test 1:
+#### Test 1
 
 **@Function: int select_board_size(void);**
 
@@ -145,7 +145,7 @@ make test_1
 ./bin/tests/test_1
 ```
 
-#### Test 2:
+#### Test 2
 
 **@Function: int check_winner(int board_size, char board[][board_size], int player_name);**
 
@@ -163,7 +163,7 @@ make test_2
 ./bin/tests/test_2
 ```
 
-#### Test 3:
+#### Test 3
 
 **@Function: void player_move(int board_size, char board[][board_size], int player_name);**
 
@@ -178,7 +178,7 @@ make test_3
 ./bin/tests/test_3
 ```
 
-#### Test 4:
+#### Test 4
 
 When the board is of size 19, this test will show the function’s behaviour. 
 To run this test, use:
@@ -191,7 +191,7 @@ make test_4
 ./bin/tests/test_4
 ```
 
-#### Test 5:
+#### Test 5
 
 When the board is of size 15, this test will show the function’s behaviour. 
 To run this test, use:
@@ -204,7 +204,7 @@ make test_5
 ./bin/tests/test_5
 ```
 
-#### Test 6:
+#### Test 6
 
 When the board size is greater than 15 and less than 19, this test will use a random board size and show the function’s behaviour. 
 To run this test, use:
@@ -217,7 +217,7 @@ make test_6
 ./bin/tests/test_6
 ```
 
-#### Test 7:
+#### Test 7
 
 When the board size is greater than 0 and less than 15, this test will use a random board size and show the function’s behaviour. 
 To run this test, use:
@@ -230,7 +230,7 @@ make test_7
 ./bin/tests/test_7
 ```
 
-#### Test 8:
+#### Test 8
 
 When the board size is greater than 19, this test will use a random board size between 20 and 100, and show the function’s behaviour.  
 To run this test, use:
@@ -244,7 +244,7 @@ make test_8
 ```
 
 
-#### Test 9:
+#### Test 9
 
 When the board size is less than or equal to 0, this test will use a random board size between -100 and 0, and show the function’s behaviour.  
 To run this test, use:
