@@ -1,4 +1,4 @@
-﻿# Group_D_Gomoku
+# Group_D_Gomoku
 
 ## Organization
 
@@ -139,7 +139,22 @@ If you are using other editors or IDEs in Windows, please follow the official tu
 
 
 #### Run graphic version on Ubuntu
+To run the program, you need to install gcc first.
+Open the terminal first and then use this command line:
+sudo apt-get install build-essential
+****
+After you install gcc and gtk3.0 you can run the programe.
+Firstly, you need to copy graphic.c, game_logic.c and button_logic then paste to the folder src.
 
+![folder](folder.png)
+
+Next, open the terminal in src and enter the following command:
+
+![command](command.png)
+
+After that you should get a new file called wu. In the end, you need to enter following command.
+
+![command](command.png)
 
 
 ## Detailed Instruction
