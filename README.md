@@ -1,12 +1,16 @@
 # Group_D_Gomoku
 
+[TOC]
+
+
+
 ## Organization
 
 University of Ottawa & University of Carleton
 
 
 
-## Authors:
+## Authors
 
 Bin Jia
 
@@ -34,7 +38,7 @@ Gomoku, also called Five in a Row, is an abstract strategy board game. It is tra
 
    
 
-## Further Functions:
+## Further Functions
 
 1. Background music: The music will be background long music, that would be around 2 to 5 minutes. Also, we will try to add action sounds (SFX). These will give sound feedback when a player or machine plays a move and when a party wins the match.
 
