@@ -13,8 +13,6 @@
       - [2. Graphic Version](#2-graphic-version)
   * [Detailed Instruction](#detailed-instruction)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 ## Organization
 
 University of Ottawa & University of Carleton
