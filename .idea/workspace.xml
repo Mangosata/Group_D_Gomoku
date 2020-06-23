@@ -39,6 +39,12 @@
     <list default="true" id="cfd1113c-507c-4629-a6a7-b80ca6ee4bbb" name="Default Changelist" comment="Updated README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/board.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/board_player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clion_run.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphic_board.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/graphic/graphic.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/graphic/graphic.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphic/graphic.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphic/graphic.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592871753557</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Updated README.md">
+      <created>1592872257451</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1592872257451</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,22 +373,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="386" key="Github.CreatePullRequestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592871786153" />
-    <state width="1877" height="881" key="GridCell.Tab.0.bottom" timestamp="1592871736816">
+    <state width="1877" height="881" key="GridCell.Tab.0.bottom" timestamp="1592873404552">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="881" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592871736816" />
-    <state width="1877" height="881" key="GridCell.Tab.0.center" timestamp="1592871736816">
+    <state width="1877" height="881" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592873404552" />
+    <state width="1877" height="881" key="GridCell.Tab.0.center" timestamp="1592873404552">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="881" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592871736816" />
-    <state width="1877" height="881" key="GridCell.Tab.0.left" timestamp="1592871736816">
+    <state width="1877" height="881" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592873404552" />
+    <state width="1877" height="881" key="GridCell.Tab.0.left" timestamp="1592873404552">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="881" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592871736816" />
-    <state width="1877" height="881" key="GridCell.Tab.0.right" timestamp="1592871736816">
+    <state width="1877" height="881" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592873404552" />
+    <state width="1877" height="881" key="GridCell.Tab.0.right" timestamp="1592873404552">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="881" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592871736816" />
+    <state width="1877" height="881" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592873404552" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1592845176665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -416,10 +429,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592690424230" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592871754594">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592872258979">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592871754594" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592872258979" />
     <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592858185953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
