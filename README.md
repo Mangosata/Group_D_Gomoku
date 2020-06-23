@@ -4,7 +4,7 @@
   * [Organization](#organization)
   * [Authors](#authors)
   * [Project Statement](#project-statement)
-  * [Basic Functions:](#basic-functions-)
+  * [Basic Functions](#basic-functions)
   * [Further Functions](#further-functions)
   * [Description](#description)
   * [File Structure](#file-structure)
@@ -37,7 +37,7 @@ Gomoku, also called Five in a Row, is an abstract strategy board game. It is tra
 
 
 
-## Basic Functions:
+## Basic Functions
 
 1. The main function is to achieve a two-player battle.
 
