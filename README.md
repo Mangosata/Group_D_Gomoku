@@ -149,6 +149,11 @@ Firstly, you need to copy graphic.c, game_logic.c and button_logic then paste to
 
 ![folder](folder.png)
 
+Then, because we change the path of .c file, we need to change the path of .h file in .c file.
+change ../../include to ../, for example, for game_logic.h path in game_logic.c. You need to change it as 
+```bash
+#include "../include/game_logic/game_logic.h"
+```
 Next, open the terminal in src and enter the following command:
 
 ```bash
