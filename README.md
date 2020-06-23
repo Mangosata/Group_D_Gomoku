@@ -145,33 +145,19 @@ Open the terminal first and then use this command line:
 sudo apt-get install build-essential
 ```
 After you install gcc and gtk3.0 you can run the programe.
-Firstly, you need to copy graphic.c, game_logic.c and button_logic then paste to the folder src.
-
-![folder](folder.png)
-
-Then, because we change the path of .c file, we need to change the path of .h file in .c file.
-change ../../include to ../include, for example, for game_logic.h path in game_logic.c.
-original one is:
+Firstly, you need to open the root folder and open the terminal. Then use this command line:
 ```bash
-#include "../../include/game_logic/game_logic.h"
+make
 ```
-you need to change to:
-```bash
-#include "../include/game_logic/game_logic.h"
-```
-Next, open the terminal in src and enter the following command:
+Then, you will have graphic.o, game_logic.o, button_logic.o in the build folder and main file in the bin file.
+
+Next, enter the following command in the terminal:
 
 ```bash
-gcc -o wu main.c graphic.c button_logic.c game_logic.c 'pkg-config --cflags --libs gtk+-3.0' -lm
+./main
 ```
-![command](command.png)
 
-After that you should get a new file called wu. In the end, you need to enter following command and you will run the program.
-
-```bash
-./wu
-```
-![command](command.png)
+After that you can run the game.
 
 
 ## Detailed Instruction
