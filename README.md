@@ -135,35 +135,39 @@ Next, to run the graphic version, you should download and install GTK 3.0 first,
 
 
 
-#####  Run graphic version on Ubuntu
+**Run graphic version on Ubuntu**
 
-  To run the program, you need to install gcc first.
-  Open the terminal first and then use this command line:
+To run the program, you need to install gcc first.
+
+Open the terminal first and then use this command line:
 
   ```bash
   sudo apt-get install build-essential
   ```
 
-  After you install gcc and GTK +3.0 you can run the program.
-  Firstly, you need to copy graphic.c, game_logic.c and button_logic then paste to the folder src.
+After you install gcc and GTK +3.0 you can run the program.
+
+Firstly, you need to copy graphic.c, game_logic.c and button_logic then paste to the folder src.
 
   ![folder](data/folder.png)
 
-  Then, because we change the path of .c file, we need to change the path of .h file in .c file.
-  change ../../include to ../include, for example, for game_logic.h path in game_logic.c.
-  original one is:
+Then, because we change the path of .c file, we need to change the path of .h file in .c file.
+
+change ../../include to ../include, for example, for game_logic.h path in game_logic.c.
+
+original one is:
 
   ```bash
   #include "../../include/game_logic/game_logic.h"
   ```
 
-  you need to change to:
+you need to change to:
 
   ```bash
   #include "../include/game_logic/game_logic.h"
   ```
 
-  Next, open the terminal in src and enter the following command:
+Next, open the terminal in src and enter the following command:
 
   ```bash
   gcc -o wu main.c graphic.c button_logic.c game_logic.c 'pkg-config --cflags --libs gtk+-3.0' -lm
@@ -171,7 +175,7 @@ Next, to run the graphic version, you should download and install GTK 3.0 first,
 
   ![command](data/command.png)
 
-  After that you should get a new file called wu. In the end, you need to enter following command and you will run the program.
+After that you should get a new file called wu. In the end, you need to enter following command and you will run the program.
 
   ```bash
   ./wu
@@ -182,7 +186,7 @@ Next, to run the graphic version, you should download and install GTK 3.0 first,
 
 
 
-##### Run graphic version on Windows
+**Run graphic version on Windows**
 
 My environment is:
 
