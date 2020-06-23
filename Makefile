@@ -11,6 +11,7 @@ BINDIR_TESTS = bin\tests
 all: main
 
 test_1: main_a.o board_a.o test_1.o game_a.o
+	mkdir -p bin\tests
 	$(CC) $(OBJDIR_TESTS)\main_a.o $(OBJDIR_TESTS)\board_a.o $(OBJDIR_TESTS)\test_1.o $(OBJDIR_TESTS)\game_a.o -o $(BINDIR_TESTS)\test_1
 	
 test_2: main_a.o board_a.o test_1.o test_2.o game_b.o
@@ -38,7 +39,7 @@ test_9: main_g.o board_a.o test_1.o test_2.o test_9.o game_b.o
 	$(CC) $(OBJDIR_TESTS)\main_g.o $(OBJDIR_TESTS)\board_a.o $(OBJDIR_TESTS)\test_1.o $(OBJDIR_TESTS)\test_2.o $(OBJDIR_TESTS)\test_9.o $(OBJDIR_TESTS)\game_b.o -o $(BINDIR_TESTS)\test_9
 
 main: main.o board.o game.o
-	$(CC) $(OBJDIR)\main.o $(OBJDIR)\board.o $(OBJDIR)\game.o -o $(BINDIR)\main_game.exe
+	$(CC) $(OBJDIR)\main.o $(OBJDIR)\board.o $(OBJDIR)\game.o -o $(BINDIR)\main_game
 
 main.o: .\src\main.c
 	$(CC) $(CFLAGS) .\src\main.c -o $(OBJDIR)\main.o
@@ -108,3 +109,7 @@ test_8.o: .\test\src\tests\test_8.c
 	
 test_9.o: .\test\src\tests\test_9.c
 	$(CC) $(CFLAGS) .\test\src\tests\test_9.c -o $(OBJDIR_TESTS)\test_9.o
+	
+#CLEAN COMMANDS
+clean: 
+	rm -f bin/* build/*
