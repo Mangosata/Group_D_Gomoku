@@ -109,7 +109,6 @@ int check_winner(int board_array[ROW][COL]) {
             } else {
                 board[i][j] = 0;
             }
-
         }
     }
 

@@ -27,8 +27,6 @@ void reset(void) {
         PLAYER = 1;
         memset(BOARD_ARRAY, 0, sizeof(BOARD_ARRAY));
     }
-
-
 }
 
 /*
