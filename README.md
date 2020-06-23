@@ -149,7 +149,7 @@ Firstly, you need to open the root folder and open the terminal. Then use this c
 ```bash
 make
 ```
-Then, you will have graphic.o, game_logic.o, button_logic.o in the build folder and main file in the bin file.
+Then, you will have graphic.o, game_logic.o, button_logic.o in the build folder and main file in the bin folder.
 
 Next, enter the following command in the terminal:
 
