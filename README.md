@@ -44,19 +44,45 @@ Gomoku, also called Five in a Row, is an abstract strategy board game. It is tra
 
 1. The console version will provide two size boards shown like the following:
 
-   ![board](board.JPG)
+   ![board](data\board.JPG)
 
    After choosing the board size, player 1 can put the stone (X) on the board by inputting row and column, then change the turn, player 2 will put the stone (O) on the board by the same way, like following:
 
-   ![board_player](board_player.png)
+   ![board_player](data\board_player.png)
 
    If any player satisfy the victory condition, it will output who it the winner.
 
 2. We also provide a graphic version, but this version only has a 19 * 19 board and the stones are black and blue. Player can click "Player vs Player" button to start game. Moreover, they can click "Surrender" button to surrender or click "Pause" to pause. If the player clicks quit button, he will close the window. The graphic interface looks like the following:
 
-   ![graphic_board](graphic_board-1592871703676.png)
+   ![graphic_board](data\graphic_board.png)
 
 
+
+## File Structure
+
+The file structure shown like the following:
+
+> ├─**bin**
+> ├─**build**
+> ├─**data**
+> ├─**include**
+> │  ├─button_logic
+> │  │  ├─*button_logic.h*
+> │  ├─game_logic
+> │  │  ├─*game_logic.h*
+> │  └─graphic
+> │  │  ├─*graphic.h*
+> ├─**src**
+> │  ├─button_logic
+> │  │    ├─*button_logic.c*
+> │  ├─game_logic
+> │  │    ├─*game_logic.c*
+> │  └─graphic
+> │  │    ├─*graphic.c*
+> └─**test**
+>     ├─data
+>     ├─include
+>     └─src
 
 ## How to use
 
@@ -138,7 +164,7 @@ target_link_libraries (Group_D_Gomoku ${GTK3_LIBRARIES})
 
 If you are using Clion, you can click "Run" button to run this program easily.
 
-![clion_run](clion_run.png)
+![clion_run](data\clion_run.png)
 
 If you are using other editors or IDEs in Windows and you want to run this graphical version, please follow the official tutorial https://www.gtk.org/docs/getting-started/hello-world/.
 

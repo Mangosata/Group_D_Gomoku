@@ -11,7 +11,7 @@
 /*
  * Use some global variables to control game status.
  * START_PLAYER_GAME: Initialize the status of start,
- *                    0 means not start yet, -1 means one of players surrendered, 1 means game started.
+ *                    0 means not start yet, -1 means game over, 1 means game started.
  * PLAYER: Initialize the player, it should be player 1 (black) first.
  * PAUSE_GAME: Initialize the status of pause, 0 means not pause.
  * WINNER_FLAG: Initialize the winner status, 0 means no winner yet.

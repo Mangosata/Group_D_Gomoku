@@ -6,8 +6,7 @@ cairo_surface_t *SURFACE = NULL;
 
 /*
  * Initialize the status of start, 0 means not start yet,
- * -1 means one of players surrendered,
- * 1 means game started.
+ * -1 means game over, 1 means game started.
  */
 START_PLAYER_GAME = 0;
 
