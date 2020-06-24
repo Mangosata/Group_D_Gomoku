@@ -251,7 +251,7 @@ If you are using other editors or IDEs in Windows and you want to run this graph
 
 ## Detailed Instruction
 
-**If you want to know the detailed instruction and function explanations, please go to our wiki page https://github.com/Mangosata/Group_D_Gomoku/wiki.**
+If you want to know the detailed instruction and function explanations, please go to our wiki page https://github.com/Mangosata/Group_D_Gomoku/wiki.
 
 ## Tests
 
