@@ -12,6 +12,7 @@
       - [1. Console Version](#1-console-version)
       - [2. Graphic Version](#2-graphic-version)
   * [Detailed Instruction](#detailed-instruction)
+  * [Tests](#tests)
 
 ## Organization
 
@@ -251,4 +252,10 @@ If you are using other editors or IDEs in Windows and you want to run this graph
 ## Detailed Instruction
 
 **If you want to know the detailed instruction and function explanations, please go to our wiki page https://github.com/Mangosata/Group_D_Gomoku/wiki.**
+
+## Tests
+
+To run the tests, the instructions can be found in the **Console Version**. Click on the link below to get there: 
+
+https://github.com/Mangosata/Group_D_Gomoku/tree/console_version#how-to-run-the-tests
 
